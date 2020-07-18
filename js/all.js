@@ -1,42 +1,42 @@
-const questions = [
-"³ª´Â ÁÖº¯ÀÇ ÀÇ°ßÀ» ¹Ş¾ÆµéÀÌ´Â ÆíÀÌ´Ù.",
-"³ª´Â Á¶º°°úÁ¦¸¦ ÇÒ ¶§ ÃÖ´ëÇÑ ÆíÀÇ¸¦ ¸ÂÃß±â À§ÇØ ³ë·ÂÇÑ´Ù.",
-"³ª´Â ¾î´À Á¤µµ Å¸ÇùÀÌ ÀÖ¾î¾ß ÀÌ ¼¼»óÀÌ »ì±â ÆíÇÏ´Ù°í »ı°¢ÇÑ´Ù.",
-"³ª´Â Ä£±¸µé¿¡°Ô ÀÖ¾î¼­ Æí¾ÈÇÑ Á¸ÀçÀÌ´Ù.",
-"³ª´Â Á¾Á¾ »çÈ¸Àû ¾àÀÚ¸¦ À§ÇØ ÇÒ ¼ö ÀÖ´Â °ÍÀ» »ı°¢ÇØº¸°í´Â ÇÑ´Ù.",
-"³ª´Â ´ë¸¦ À§ÇØ¼­ ¼Ò¸¦ Èñ»ıÇÒ ¼ö ¾ø´Â °æ¿ì¸¦ ÀÌÇØÇÑ´Ù.",
-"³ª´Â °úÁ¤ÀÌ ¾î¶»°Ô µÇ´õ¶óµµ °á°ú¹°À» ¿Ï¼ºÇÏµµ·Ï ³ë·ÂÇÑ´Ù.",
-"³ª´Â ÁÙ°ğ ¾î¶»°Ô ÇÏ¸é È¿À²ÀûÀ¸·Î ÀÏÇÒ ¼ö ÀÖ´ÂÁö °í¹ÎÇÏ°ï ÇÑ´Ù.",
-"³ª´Â Ç×»ó ÀÚ½ÅÀÇ ¸ñÇ¥¸¦ À§ÇØ ¸¸¹İÀÇ ÁØºñ¸¦ ÇØ µĞ´Ù.",
-"³ª´Â Ä£±¸µé°ú ¿©ÇàÀ» °¥ ¶§ ÁÖ·Î »çÁøÀ» ³²°ÜµÎ´Â ÆíÀÌ´Ù.",
-"³ª´Â »ç¶÷µé°ú ¾î¿ï¸²À» ÅëÇØ ¿¡³ÊÁö¸¦ ÃæÀüÇÑ´Ù.",
-"³ª´Â ÁÖº¯ÀÇ ÁöÁö¿Í ÀÎÁ¤À» ÅëÇØ ÀÚÁ¸°¨À» Ã¤¿ï ¶§°¡ ÀÖ´Ù.",
-"³ª´Â È¥ÀÚ¼­µµ ÃæºĞÈ÷ Çàº¹ÇÏ´Ù°í ´À³¢¸ç ³» ÀÚ½ÅÀÌ °¡Àå Áß¿äÇÏ´Ù.",
-"³ª´Â ÀÚÀ¯·Î¿î »ç»öÀ» ÅëÇØ ¸¶À½¼Ó °¨Á¤À» Á¤¸®ÇÏ°í´Â ÇÑ´Ù.",
-"³ª´Â ÀÚÁÖ ¼¼»ó¿¡ ¾È µÉ °ÍÀº ¾ø´Ù°í ´À³¤´Ù.",
-"³ª´Â ³ª ÀÚ½ÅÀÇ °ü³äÀÌ ÅõÃ¶ÇÏ´Ù.",
-"³ª´Â Å©°Ô ½É¸®°¡ Èçµé¸®´Â °æ¿ì´Â ¸î ¾ø´Ù.",
-"³ª´Â °èÈ¹°ú Å½»öº¸´Ù ½ÇÇè°ú µµÀüÀ» °¡Ä¡ ÀÖ°Ô ¿©±ä´Ù.",
-"³ª´Â Àå¼Ò¿¡ µû¸¥ ºĞÀ§±â¸¦ ¾Ë¸ç, ±×¿¡ °É¸Â°Ô Çàµ¿ÇÑ´Ù.",
-"³ª´Â »õ·Î¿î »ç¶÷°ú ¸¸³ª¼­ ±í°Ô ¾ê±âÇÒ ¼ö ÀÖ´Ù."];
+ï»¿const questions = [
+"ë‚˜ëŠ” ì£¼ë³€ì˜ ì˜ê²¬ì„ ë°›ì•„ë“¤ì´ëŠ” í¸ì´ë‹¤.",
+"ë‚˜ëŠ” ì¡°ë³„ê³¼ì œë¥¼ í•  ë•Œ ìµœëŒ€í•œ í¸ì˜ë¥¼ ë§ì¶”ê¸° ìœ„í•´ ë…¸ë ¥í•œë‹¤.",
+"ë‚˜ëŠ” ì–´ëŠ ì •ë„ íƒ€í˜‘ì´ ìˆì–´ì•¼ ì´ ì„¸ìƒì´ ì‚´ê¸° í¸í•˜ë‹¤ê³  ìƒê°í•œë‹¤.",
+"ë‚˜ëŠ” ì¹œêµ¬ë“¤ì—ê²Œ ìˆì–´ì„œ í¸ì•ˆí•œ ì¡´ì¬ì´ë‹¤.",
+"ë‚˜ëŠ” ì¢…ì¢… ì‚¬íšŒì  ì•½ìë¥¼ ìœ„í•´ í•  ìˆ˜ ìˆëŠ” ê²ƒì„ ìƒê°í•´ë³´ê³ ëŠ” í•œë‹¤.",
+"ë‚˜ëŠ” ëŒ€ë¥¼ ìœ„í•´ì„œ ì†Œë¥¼ í¬ìƒí•  ìˆ˜ ì—†ëŠ” ê²½ìš°ë¥¼ ì´í•´í•œë‹¤.",
+"ë‚˜ëŠ” ê³¼ì •ì´ ì–´ë–»ê²Œ ë˜ë”ë¼ë„ ê²°ê³¼ë¬¼ì„ ì™„ì„±í•˜ë„ë¡ ë…¸ë ¥í•œë‹¤.",
+"ë‚˜ëŠ” ì¤„ê³§ ì–´ë–»ê²Œ í•˜ë©´ íš¨ìœ¨ì ìœ¼ë¡œ ì¼í•  ìˆ˜ ìˆëŠ”ì§€ ê³ ë¯¼í•˜ê³¤ í•œë‹¤.",
+"ë‚˜ëŠ” í•­ìƒ ìì‹ ì˜ ëª©í‘œë¥¼ ìœ„í•´ ë§Œë°˜ì˜ ì¤€ë¹„ë¥¼ í•´ ë‘”ë‹¤.",
+"ë‚˜ëŠ” ì¹œêµ¬ë“¤ê³¼ ì—¬í–‰ì„ ê°ˆ ë•Œ ì£¼ë¡œ ì‚¬ì§„ì„ ë‚¨ê²¨ë‘ëŠ” í¸ì´ë‹¤.",
+"ë‚˜ëŠ” ì‚¬ëŒë“¤ê³¼ ì–´ìš¸ë¦¼ì„ í†µí•´ ì—ë„ˆì§€ë¥¼ ì¶©ì „í•œë‹¤.",
+"ë‚˜ëŠ” ì£¼ë³€ì˜ ì§€ì§€ì™€ ì¸ì •ì„ í†µí•´ ìì¡´ê°ì„ ì±„ìš¸ ë•Œê°€ ìˆë‹¤.",
+"ë‚˜ëŠ” í˜¼ìì„œë„ ì¶©ë¶„íˆ í–‰ë³µí•˜ë‹¤ê³  ëŠë¼ë©° ë‚´ ìì‹ ì´ ê°€ì¥ ì¤‘ìš”í•˜ë‹¤.",
+"ë‚˜ëŠ” ììœ ë¡œìš´ ì‚¬ìƒ‰ì„ í†µí•´ ë§ˆìŒì† ê°ì •ì„ ì •ë¦¬í•˜ê³ ëŠ” í•œë‹¤.",
+"ë‚˜ëŠ” ìì£¼ ì„¸ìƒì— ì•ˆ ë  ê²ƒì€ ì—†ë‹¤ê³  ëŠë‚€ë‹¤.",
+"ë‚˜ëŠ” ë‚˜ ìì‹ ì˜ ê´€ë…ì´ íˆ¬ì² í•˜ë‹¤.",
+"ë‚˜ëŠ” í¬ê²Œ ì‹¬ë¦¬ê°€ í”ë“¤ë¦¬ëŠ” ê²½ìš°ëŠ” ëª‡ ì—†ë‹¤.",
+"ë‚˜ëŠ” ê³„íšê³¼ íƒìƒ‰ë³´ë‹¤ ì‹¤í—˜ê³¼ ë„ì „ì„ ê°€ì¹˜ ìˆê²Œ ì—¬ê¸´ë‹¤.",
+"ë‚˜ëŠ” ì¥ì†Œì— ë”°ë¥¸ ë¶„ìœ„ê¸°ë¥¼ ì•Œë©°, ê·¸ì— ê±¸ë§ê²Œ í–‰ë™í•œë‹¤.",
+"ë‚˜ëŠ” ìƒˆë¡œìš´ ì‚¬ëŒê³¼ ë§Œë‚˜ì„œ ê¹Šê²Œ ì–˜ê¸°í•  ìˆ˜ ìˆë‹¤."];
 
 const colorCode = {
-"HMOS":"invert(76%) sepia(34%) saturate(264%) hue-rotate(291deg) brightness(100%) contrast(94%)", //ºĞÈ«
-"HMOX":"invert(17%) sepia(92%) saturate(6740%) hue-rotate(358deg) brightness(102%) contrast(116%)", //»¡°­
-"HMNS":"invert(70%) sepia(13%) saturate(162%) hue-rotate(168deg) brightness(101%) contrast(85%)", //Àº»ö
-"HMNX":"invert(74%) sepia(17%) saturate(647%) hue-rotate(125deg) brightness(97%) contrast(96%)", //°­¹°
-"HGOS":"invert(24%) sepia(40%) saturate(1138%) hue-rotate(163deg) brightness(96%) contrast(88%)", //³²»ö
-"HGOX":"invert(36%) sepia(99%) saturate(1057%) hue-rotate(340deg) brightness(102%) contrast(100%)", //ÁÖÈ²
-"HGNS":"invert(26%) sepia(53%) saturate(1154%) hue-rotate(246deg) brightness(98%) contrast(91%)", //º¸¶ó
-"HGNX":"invert(29%) sepia(17%) saturate(986%) hue-rotate(329deg) brightness(96%) contrast(86%)", //°íµ¿
-"BMOS":"invert(84%) sepia(1%) saturate(1996%) hue-rotate(136deg) brightness(97%) contrast(88%)", //È¸»ö
-"BMOX":"invert(89%) sepia(12%) saturate(4550%) hue-rotate(332deg) brightness(85%) contrast(86%)", //±İ»ö
-"BMNS":"invert(0%) sepia(17%) saturate(3749%) hue-rotate(124deg) brightness(94%) contrast(93%)", //°ËÁ¤
-"BMNX":"invert(81%) sepia(3%) saturate(7499%) hue-rotate(175deg) brightness(90%) contrast(104%)", //ÇÏ´Ã
-"BGOS":"invert(48%) sepia(26%) saturate(1059%) hue-rotate(92deg) brightness(94%) contrast(98%)", //ÃÊ·Ï
-"BGOX":"invert(86%) sepia(43%) saturate(6089%) hue-rotate(5deg) brightness(111%) contrast(102%)", //³ë¶û
-"BGNS":"invert(72%) sepia(23%) saturate(3690%) hue-rotate(313deg) brightness(100%) contrast(96%)", //»ì±¸
-"BGNX":"invert(18%) sepia(62%) saturate(5320%) hue-rotate(328deg) brightness(89%) contrast(90%)" //Áø´Ş·¡
+"HMOS":"invert(76%) sepia(34%) saturate(264%) hue-rotate(291deg) brightness(100%) contrast(94%)", //ë¶„í™
+"HMOX":"invert(17%) sepia(92%) saturate(6740%) hue-rotate(358deg) brightness(102%) contrast(116%)", //ë¹¨ê°•
+"HMNS":"invert(70%) sepia(13%) saturate(162%) hue-rotate(168deg) brightness(101%) contrast(85%)", //ì€ìƒ‰
+"HMNX":"invert(74%) sepia(17%) saturate(647%) hue-rotate(125deg) brightness(97%) contrast(96%)", //ê°•ë¬¼
+"HGOS":"invert(24%) sepia(40%) saturate(1138%) hue-rotate(163deg) brightness(96%) contrast(88%)", //ë‚¨ìƒ‰
+"HGOX":"invert(36%) sepia(99%) saturate(1057%) hue-rotate(340deg) brightness(102%) contrast(100%)", //ì£¼í™©
+"HGNS":"invert(26%) sepia(53%) saturate(1154%) hue-rotate(246deg) brightness(98%) contrast(91%)", //ë³´ë¼
+"HGNX":"invert(29%) sepia(17%) saturate(986%) hue-rotate(329deg) brightness(96%) contrast(86%)", //ê³ ë™
+"BMOS":"invert(84%) sepia(1%) saturate(1996%) hue-rotate(136deg) brightness(97%) contrast(88%)", //íšŒìƒ‰
+"BMOX":"invert(89%) sepia(12%) saturate(4550%) hue-rotate(332deg) brightness(85%) contrast(86%)", //ê¸ˆìƒ‰
+"BMNS":"invert(0%) sepia(17%) saturate(3749%) hue-rotate(124deg) brightness(94%) contrast(93%)", //ê²€ì •
+"BMNX":"invert(81%) sepia(3%) saturate(7499%) hue-rotate(175deg) brightness(90%) contrast(104%)", //í•˜ëŠ˜
+"BGOS":"invert(48%) sepia(26%) saturate(1059%) hue-rotate(92deg) brightness(94%) contrast(98%)", //ì´ˆë¡
+"BGOX":"invert(86%) sepia(43%) saturate(6089%) hue-rotate(5deg) brightness(111%) contrast(102%)", //ë…¸ë‘
+"BGNS":"invert(72%) sepia(23%) saturate(3690%) hue-rotate(313deg) brightness(100%) contrast(96%)", //ì‚´êµ¬
+"BGNX":"invert(18%) sepia(62%) saturate(5320%) hue-rotate(328deg) brightness(89%) contrast(90%)" //ì§„ë‹¬ë˜
 }; 
 
 const weight = [2,3,2,1,2,  3,3,1,2,1, 3,2,2,2,1,  2,1,3,1,3];
@@ -58,7 +58,7 @@ function createQuestionBox(question, index){
 	box.appendChild(h3)
 	let answerbox = document.createElement("div");
 	answerbox.setAttribute("class", "question-answer");
-	const label = ["¸Å¿ì ±×·¸´Ù", "±×·¸´Ù", "º¸ÅëÀÌ´Ù", "¾Æ´Ï´Ù", "¸Å¿ì ¾Æ´Ï´Ù"];
+	const label = ["ë§¤ìš° ê·¸ë ‡ë‹¤", "ê·¸ë ‡ë‹¤", "ë³´í†µì´ë‹¤", "ì•„ë‹ˆë‹¤", "ë§¤ìš° ì•„ë‹ˆë‹¤"];
 	for (let i = 0; i < 5; i++)
 	{
 		let answer = document.createElement("input");
@@ -81,7 +81,7 @@ function onClickResultButton(){
 			if (i in confirmedAnswer == false)
 				str += (i+1)+","
 		}
-		document.getElementById("fail-console").innerText=str.substring(0, str.length - 1) + "¹®Ç×ÀÌ ¼±ÅÃµÇÁö ¾Ê¾Ò½À´Ï´Ù!";
+		document.getElementById("fail-console").innerText=str.substring(0, str.length - 1) + "ë¬¸í•­ì´ ì„ íƒë˜ì§€ ì•Šì•˜ìŠµë‹ˆë‹¤!";
 	}
 	else{
 		window.location.href = "result.html?answer=" + JSON.stringify(confirmedAnswer);
@@ -104,22 +104,22 @@ function buildResult(){
 
 function calculate(answers){
 	var colorNameMap = {};
-	colorNameMap["HMOS"] = "ºĞÈ«";
-	colorNameMap["HMOX"] = "»¡°­";
-	colorNameMap["HMNS"] = "Àº";
-	colorNameMap["HMNX"] = "¹°";
-	colorNameMap["HGOS"] = "³²";
-	colorNameMap["HGOX"] = "ÁÖÈ²";
-	colorNameMap["HGNS"] = "º¸¶ó";
-	colorNameMap["HGNX"] = "°íµ¿";
-	colorNameMap["BMOS"] = "È¸";
-	colorNameMap["BMOX"] = "±İ";
-	colorNameMap["BMNS"] = "°ËÁ¤";
-	colorNameMap["BMNX"] = "ÇÏ´Ã";
-	colorNameMap["BGOS"] = "ÃÊ·Ï";
-	colorNameMap["BGOX"] = "³ë¶û";
-	colorNameMap["BGNS"] = "»ì±¸";
-	colorNameMap["BGNX"] = "Áø´Ş·¡";
+	colorNameMap["HMOS"] = "ë¶„í™";
+	colorNameMap["HMOX"] = "ë¹¨ê°•";
+	colorNameMap["HMNS"] = "ì€";
+	colorNameMap["HMNX"] = "ë¬¼";
+	colorNameMap["HGOS"] = "ë‚¨";
+	colorNameMap["HGOX"] = "ì£¼í™©";
+	colorNameMap["HGNS"] = "ë³´ë¼";
+	colorNameMap["HGNX"] = "ê³ ë™";
+	colorNameMap["BMOS"] = "íšŒ";
+	colorNameMap["BMOX"] = "ê¸ˆ";
+	colorNameMap["BMNS"] = "ê²€ì •";
+	colorNameMap["BMNX"] = "í•˜ëŠ˜";
+	colorNameMap["BGOS"] = "ì´ˆë¡";
+	colorNameMap["BGOX"] = "ë…¸ë‘";
+	colorNameMap["BGNS"] = "ì‚´êµ¬";
+	colorNameMap["BGNX"] = "ì§„ë‹¬ë˜";
 
 	let h = 0;
 	let b = 0;
@@ -184,12 +184,12 @@ function calculate(answers){
 	}
 
 	let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"M");
-	document.getElementById("result").innerText="´ç½ÅÀº "+colorNameMap[result]+"»öÀ» ´à¾Ò½À´Ï´Ù.";
+	document.getElementById("result").innerText="ë‹¹ì‹ ì€ "+colorNameMap[result]+"ìƒ‰ì„ ë‹®ì•˜ìŠµë‹ˆë‹¤.";
 	document.getElementById("decription").innerText=
-	(o>n?"¿©·¯¸ğ·Î »ç¶÷À» ÅëÇØ ±â¿îÀÌ Â÷´Â ´ç½ÅÀº ":"È¥ÀÚ¸¸ÀÇ »ç»öÀ» Áñ±â´Â ´ç½ÅÀº ")+
-	(m>g?"¸ñÇ¥¸¦ ¼º°ø½ÃÅ°±â À§ÇØ ":"±ú´ŞÀ½°ú °æÇèÀ» ¾ò±â À§ÇØ ") +
-	(s>x?"ÀÚ½Å¸¸ÀÇ ±ÔÄ¢À» ¼¼¿ó´Ï´Ù. ":"ÁÖº¯ÀÇ »óÈ²À» Ç×»ó ÆÄ¾ÇÇÏ·Á°í ÇÕ´Ï´Ù.")+
-	(h>b?"ÀÌ·± ´ç½ÅÀ» »ç¶÷µéÀº Æí¾ÈÇÏ°Ô ´À³¥ °ÍÀÔ´Ï´Ù.":"ÀÌ·± ´ç½ÅÀ» »ç¶÷µéÀº Á¶±İ ºÒÆíÇÏÁö¸¸ µû¸¦ °ÍÀÔ´Ï´Ù.");
+	(o>n?"ì—¬ëŸ¬ëª¨ë¡œ ì‚¬ëŒì„ í†µí•´ ê¸°ìš´ì´ ì°¨ëŠ” ë‹¹ì‹ ì€ ":"í˜¼ìë§Œì˜ ì‚¬ìƒ‰ì„ ì¦ê¸°ëŠ” ë‹¹ì‹ ì€ ")+
+	(m>g?"ëª©í‘œë¥¼ ì„±ê³µì‹œí‚¤ê¸° ìœ„í•´ ":"ê¹¨ë‹¬ìŒê³¼ ê²½í—˜ì„ ì–»ê¸° ìœ„í•´ ") +
+	(s>x?"ìì‹ ë§Œì˜ ê·œì¹™ì„ ì„¸ì›ë‹ˆë‹¤. ":"ì£¼ë³€ì˜ ìƒí™©ì„ í•­ìƒ íŒŒì•…í•˜ë ¤ê³  í•©ë‹ˆë‹¤.")+
+	(h>b?"ì´ëŸ° ë‹¹ì‹ ì„ ì‚¬ëŒë“¤ì€ í¸ì•ˆí•˜ê²Œ ëŠë‚„ ê²ƒì…ë‹ˆë‹¤.":"ì´ëŸ° ë‹¹ì‹ ì„ ì‚¬ëŒë“¤ì€ ì¡°ê¸ˆ ë¶ˆí¸í•˜ì§€ë§Œ ë”°ë¥¼ ê²ƒì…ë‹ˆë‹¤.");
 	document.getElementById("picture").style.filter = colorCode[result];
 }
 
