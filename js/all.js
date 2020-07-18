@@ -20,7 +20,7 @@ const questions = [
 "나는 장소에 따른 분위기를 알며, 그에 걸맞게 행동한다.",
 "나는 새로운 사람과 만나서 깊게 얘기할 수 있다."];
 
-
+var confirmedAnswer = {};
 
 function buildQuestion(){
 	let index =0;
@@ -44,12 +44,33 @@ function createQuestionBox(question, index){
 		answer.setAttribute("type", "radio");
 		answer.setAttribute("name", "q"+index);
 		answer.setAttribute("value", i+1);
-		/*if (i == 2){
-			answer.setAttribute("checked", "checked");
-		}*/
+		answer.addEventListener("click", function(){onClickAnswer(index);});
 		answerbox.appendChild(answer);
 		answerbox.appendChild(document.createTextNode(label[i]));
 	}
 	box.appendChild(answerbox);
 	return box;
+}
+
+function onClickResultButton(){
+	if (Object.keys(confirmedAnswer).length < 20){
+		let str = "";
+		for (let i = 0; i < 20; i++)
+		{
+			if (i in confirmedAnswer == false)
+				str += (i+1)+","
+		}
+		document.getElementById("fail-console").innerText=str.substring(0, str.length - 1) + "문항이 선택되지 않았습니다!";
+	}
+	else{
+	
+	}
+}
+
+function onClickAnswer(index){
+	confirmedAnswer[index] = true;
+	let value = Object.keys(confirmedAnswer).length / 20;
+	let percentage = (value * 100)+"%";
+	document.getElementById("progress-text").innerText = percentage;
+	document.getElementById("progress").style.backgroundPosition = "-"+(window.innerWidth * (1-value))+"px 0px";
 }
