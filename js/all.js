@@ -84,7 +84,7 @@ function onClickResultButton(){
 		document.getElementById("fail-console").innerText=str.substring(0, str.length - 1) + "문항이 선택되지 않았습니다!";
 	}
 	else{
-		window.location.href = "result.html?answer=" + JSON.stringify(confirmedAnswer);
+		window.location.href = "html/result.html?answer=" + JSON.stringify(confirmedAnswer);
 	}
 }
 
@@ -194,5 +194,5 @@ function calculate(answers){
 }
 
 function onClickReturn(){
-	window.location.href = "index.html";
+	window.location.href = "./index.html";
 }
