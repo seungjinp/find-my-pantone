@@ -91,7 +91,7 @@ function onClickResultButton(){
 function onClickAnswer(index, radioValue){
 	confirmedAnswer[index] = radioValue;
 	let value = Object.keys(confirmedAnswer).length / 20;
-	let percentage = (value * 100)+"%";
+	let percentage = Math.round(value * 100)+"%";
 	document.getElementById("progress-text").innerText = percentage;
 	document.getElementById("progress").style.backgroundPosition = "-"+(window.innerWidth * (1-value))+"px 0px";
 }
@@ -134,56 +134,57 @@ function calculate(answers){
 	{
 		if (i < 5)
 		{
-			if (i == 5 || i ==4)
-				h += 5 * weight[i];
-			else if (i != 3)
-				b += 5 * weight[i];
+			var val = answers[i];
+			if (val == 5 || val ==4)
+				h += (val) * weight[i];
+			else if (val != 3)
+				b += (5-val) * weight[i];
 		}
 		else if (i < 10)
 		{
-			if (i == 5 || i ==4)
-				m += 5 * weight[i];
-			else if (i != 3)
-				g += 5 * weight[i];
+			if (val == 5 || val ==4)
+				m += (val) * weight[i];
+			else if (val != 3)
+				g += (5-val) * weight[i];
 		}
 		else if (i < 12)
 		{
-			if (i == 5 || i ==4)
-				o += 5 * weight[i];
-			else if (i != 3)
-				n += 5 * weight[i];
+			if (val == 5 || val ==4)
+				o += (val) * weight[i];
+			else if (val != 3)
+				n += (5-val) * weight[i];
 		}
 		else if (i < 14)
 		{
-			if (i == 5 || i ==4)
-				n += 5 * weight[i];
-			else if (i != 3)
-				o += 5 * weight[i];
+			if (val == 5 || val ==4)
+				n += (val) * weight[i];
+			else if (val != 3)
+				o += (5-val) * weight[i];
 		}
 		else if (i == 14)
 		{
-			if (i == 5 || i ==4)
-				o += 5 * weight[i];
-			else if (i != 3)
-				n += 5 * weight[i];
+			if (val == 5 || val ==4)
+				o += (val) * weight[i];
+			else if (val != 3)
+				n += (5-val) * weight[i];
 		}
 		else if (i == 15 || i == 16 || i == 18)
 		{
-			if (i == 5 || i ==4)
-				s += 5 * weight[i];
-			else if (i != 3)
-				x += 5 * weight[i];
+			if (val == 5 || val ==4)
+				s += (val) * weight[i];
+			else if (val != 3)
+				x += (5-val) * weight[i];
 		}
 		else if (i == 17 || i == 19)
 		{
-			if (i == 5 || i ==4)
-				x += 5 * weight[i];
-			else if (i != 3)
-				s += 5 * weight[i];
+			if (val == 5 || val ==4)
+				x += (val) * weight[i];
+			else if (val != 3)
+				s += (5-val) * weight[i];
 		}
 	}
 
-	let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"M");
+	let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"X");
 	document.getElementById("result").innerText="당신은 "+colorNameMap[result]+"색을 닮았습니다.";
 	document.getElementById("decription").innerText=
 	(o>n?"여러모로 사람을 통해 기운이 차는 당신은 ":"혼자만의 사색을 즐기는 당신은 ")+
