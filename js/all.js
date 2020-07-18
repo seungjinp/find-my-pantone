@@ -20,6 +20,27 @@ const questions = [
 "나는 장소에 따른 분위기를 알며, 그에 걸맞게 행동한다.",
 "나는 새로운 사람과 만나서 깊게 얘기할 수 있다."];
 
+const colorCode = {
+"HMOS":"invert(76%) sepia(34%) saturate(264%) hue-rotate(291deg) brightness(100%) contrast(94%)", //분홍
+"HMOX":"invert(17%) sepia(92%) saturate(6740%) hue-rotate(358deg) brightness(102%) contrast(116%)", //빨강
+"HMNS":"invert(70%) sepia(13%) saturate(162%) hue-rotate(168deg) brightness(101%) contrast(85%)", //은색
+"HMNX":"invert(74%) sepia(17%) saturate(647%) hue-rotate(125deg) brightness(97%) contrast(96%)", //강물
+"HGOS":"invert(24%) sepia(40%) saturate(1138%) hue-rotate(163deg) brightness(96%) contrast(88%)", //남색
+"HGOX":"invert(36%) sepia(99%) saturate(1057%) hue-rotate(340deg) brightness(102%) contrast(100%)", //주황
+"HGNS":"invert(26%) sepia(53%) saturate(1154%) hue-rotate(246deg) brightness(98%) contrast(91%)", //보라
+"HGNX":"invert(29%) sepia(17%) saturate(986%) hue-rotate(329deg) brightness(96%) contrast(86%)", //고동
+"BMOS":"invert(84%) sepia(1%) saturate(1996%) hue-rotate(136deg) brightness(97%) contrast(88%)", //회색
+"BMOX":"invert(89%) sepia(12%) saturate(4550%) hue-rotate(332deg) brightness(85%) contrast(86%)", //금색
+"BMNS":"invert(0%) sepia(17%) saturate(3749%) hue-rotate(124deg) brightness(94%) contrast(93%)", //검정
+"BMNX":"invert(81%) sepia(3%) saturate(7499%) hue-rotate(175deg) brightness(90%) contrast(104%)", //하늘
+"BGOS":"invert(48%) sepia(26%) saturate(1059%) hue-rotate(92deg) brightness(94%) contrast(98%)", //초록
+"BGOX":"invert(86%) sepia(43%) saturate(6089%) hue-rotate(5deg) brightness(111%) contrast(102%)", //노랑
+"BGNS":"invert(72%) sepia(23%) saturate(3690%) hue-rotate(313deg) brightness(100%) contrast(96%)", //살구
+"BGNX":"invert(18%) sepia(62%) saturate(5320%) hue-rotate(328deg) brightness(89%) contrast(90%)" //진달래
+}; 
+
+const weight = [2,3,2,1,2,  3,3,1,2,1, 3,2,2,2,1,  2,1,3,1,3];
+
 var confirmedAnswer = {};
 
 function buildQuestion(){
@@ -81,8 +102,95 @@ function buildResult(){
 	calculate(obj);
 }
 
-function calculate(answer){
+function calculate(answers){
+	var colorNameMap = {};
+	colorNameMap["HMOS"] = "분홍";
+	colorNameMap["HMOX"] = "빨강";
+	colorNameMap["HMNS"] = "은";
+	colorNameMap["HMNX"] = "물";
+	colorNameMap["HGOS"] = "남";
+	colorNameMap["HGOX"] = "주황";
+	colorNameMap["HGNS"] = "보라";
+	colorNameMap["HGNX"] = "고동";
+	colorNameMap["BMOS"] = "회";
+	colorNameMap["BMOX"] = "금";
+	colorNameMap["BMNS"] = "검정";
+	colorNameMap["BMNX"] = "하늘";
+	colorNameMap["BGOS"] = "초록";
+	colorNameMap["BGOX"] = "노랑";
+	colorNameMap["BGNS"] = "살구";
+	colorNameMap["BGNX"] = "진달래";
 
+	let h = 0;
+	let b = 0;
+	let g = 0;
+	let m = 0;
+	let o = 0;
+	let n = 0;
+	let s = 0;
+	let x = 0;
+
+	for (let i = 0; i < 20; i++)
+	{
+		if (i < 5)
+		{
+			if (i == 5 || i ==4)
+				h += 5 * weight[i];
+			else if (i != 3)
+				b += 5 * weight[i];
+		}
+		else if (i < 10)
+		{
+			if (i == 5 || i ==4)
+				m += 5 * weight[i];
+			else if (i != 3)
+				g += 5 * weight[i];
+		}
+		else if (i < 12)
+		{
+			if (i == 5 || i ==4)
+				o += 5 * weight[i];
+			else if (i != 3)
+				n += 5 * weight[i];
+		}
+		else if (i < 14)
+		{
+			if (i == 5 || i ==4)
+				n += 5 * weight[i];
+			else if (i != 3)
+				o += 5 * weight[i];
+		}
+		else if (i == 14)
+		{
+			if (i == 5 || i ==4)
+				o += 5 * weight[i];
+			else if (i != 3)
+				n += 5 * weight[i];
+		}
+		else if (i == 15 || i == 16 || i == 18)
+		{
+			if (i == 5 || i ==4)
+				s += 5 * weight[i];
+			else if (i != 3)
+				x += 5 * weight[i];
+		}
+		else if (i == 17 || i == 19)
+		{
+			if (i == 5 || i ==4)
+				x += 5 * weight[i];
+			else if (i != 3)
+				s += 5 * weight[i];
+		}
+	}
+
+	let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"M");
+	document.getElementById("result").innerText="당신은 "+colorNameMap[result]+"색을 닮았습니다.";
+	document.getElementById("decription").innerText=
+	(o>n?"여러모로 사람을 통해 기운이 차는 당신은 ":"혼자만의 사색을 즐기는 당신은 ")+
+	(m>g?"목표를 성공시키기 위해 ":"깨달음과 경험을 얻기 위해 ") +
+	(s>x?"자신만의 규칙을 세웁니다. ":"주변의 상황을 항상 파악하려고 합니다.")+
+	(h>b?"이런 당신을 사람들은 편안하게 느낄 것입니다.":"이런 당신을 사람들은 조금 불편하지만 따를 것입니다.");
+	document.getElementById("picture").style.filter = colorCode[result];
 }
 
 function onClickReturn(){
