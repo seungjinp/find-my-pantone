@@ -194,5 +194,5 @@ function calculate(answers){
 }
 
 function onClickReturn(){
-	window.location.href = "./index.html";
+	window.location.href = "../index.html";
 }
