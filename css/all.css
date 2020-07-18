@@ -1,9 +1,9 @@
-/*@font-face {
+@font-face {
     font-family: 'NEXON Lv1 Gothic OTF';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-}*/
+}
 
 body {
     margin: 0;
@@ -16,6 +16,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     max-width: 39rem;
+    margin-bottom:200px;
 }
 
 #container {
@@ -27,10 +28,10 @@ body {
 }
 
 #progress-container {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 3rem;
-    bottom: 0rem;
+    bottom: 0;
     left: inherit;
     background-color: rgba(255, 255, 255, 0.4);
 }
@@ -73,11 +74,23 @@ p {
 }
 
 .question-box {
-    padding: 0 1rem 0 1rem;
+    padding: 0 1rem 2.8rem 1rem;
     font-size: 0.75rem;
+    margin-bottom:1rem;
 }
 
 .question-answer {
     justify-content: space-between;
     display: flex;
+}
+
+#show-result {
+    display:block;
+    width: 100%;
+    height:60px;
+    border-style: none;
+    border-radius: 4px;
+    background: rgb(55,51,126);
+    color: white;
+    font-family: 'NEXON Lv1 Gothic OTF';
 }
