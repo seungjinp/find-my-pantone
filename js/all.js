@@ -44,7 +44,7 @@ function createQuestionBox(question, index){
 		answer.setAttribute("type", "radio");
 		answer.setAttribute("name", "q"+index);
 		answer.setAttribute("value", i+1);
-		answer.addEventListener("click", function(){onClickAnswer(index);});
+		answer.addEventListener("click", function(){onClickAnswer(index, i+1);});
 		answerbox.appendChild(answer);
 		answerbox.appendChild(document.createTextNode(label[i]));
 	}
@@ -63,14 +63,28 @@ function onClickResultButton(){
 		document.getElementById("fail-console").innerText=str.substring(0, str.length - 1) + "문항이 선택되지 않았습니다!";
 	}
 	else{
-	
+		window.location.href = "result.html?answer=" + JSON.stringify(confirmedAnswer);
 	}
 }
 
-function onClickAnswer(index){
-	confirmedAnswer[index] = true;
+function onClickAnswer(index, radioValue){
+	confirmedAnswer[index] = radioValue;
 	let value = Object.keys(confirmedAnswer).length / 20;
 	let percentage = (value * 100)+"%";
 	document.getElementById("progress-text").innerText = percentage;
 	document.getElementById("progress").style.backgroundPosition = "-"+(window.innerWidth * (1-value))+"px 0px";
+}
+
+function buildResult(){
+	let val = decodeURIComponent(location.href).substr(location.href.lastIndexOf('=') + 1);
+	let obj = JSON.parse(val);
+	calculate(obj);
+}
+
+function calculate(answer){
+
+}
+
+function onClickReturn(){
+	window.location.href = "index.html";
 }
