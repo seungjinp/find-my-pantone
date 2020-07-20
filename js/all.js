@@ -1,10 +1,10 @@
 ﻿const questions = [
-"나는 주변의 의견을 받아들이는 편이다.",
+"나는 주변의 의견을 잘 받아들이는 편이다.",
 "나는 조별과제를 할 때 최대한 편의를 맞추기 위해 노력한다.",
 "나는 어느 정도 타협이 있어야 이 세상이 살기 편하다고 생각한다.",
 "나는 친구들에게 있어서 편안한 존재이다.",
 "나는 종종 사회적 약자를 위해 할 수 있는 것을 생각해보고는 한다.",
-"나는 대를 위해서 소를 희생할 수 없는 경우를 이해한다.",
+"나는 대를 위해서 소를 희생할 수 있는 경우를 이해한다.",
 "나는 과정이 어떻게 되더라도 결과물을 완성하도록 노력한다.",
 "나는 줄곧 어떻게 하면 효율적으로 일할 수 있는지 고민하곤 한다.",
 "나는 항상 자신의 목표를 위해 만반의 준비를 해 둔다.",
@@ -17,8 +17,8 @@
 "나는 나 자신의 관념이 투철하다.",
 "나는 크게 심리가 흔들리는 경우는 몇 없다.",
 "나는 계획과 탐색보다 실험과 도전을 가치 있게 여긴다.",
-"나는 장소에 따른 분위기를 알며, 그에 걸맞게 행동한다.",
-"나는 새로운 사람과 만나서 깊게 얘기할 수 있다."];
+"나는 미지의 영역에 대해서 두려움보다 기대감이 크다.",
+"나는 의견을 대부분의 결정들을 후회하지 않는다."];
 
 const colorCode = {
 "HMOS":"invert(76%) sepia(34%) saturate(264%) hue-rotate(291deg) brightness(100%) contrast(94%)", //분홍
@@ -39,7 +39,7 @@ const colorCode = {
 "BGNX":"invert(18%) sepia(62%) saturate(5320%) hue-rotate(328deg) brightness(89%) contrast(90%)" //진달래
 }; 
 
-const weight = [2,3,2,1,2,  3,3,1,2,1, 3,2,2,2,1,  2,1,3,1,3];
+const weight = [3,3,2,1,1,  2,3,2,2,1, 3,2,2,2,1,  2,1,3,1,3];
 
 var confirmedAnswer = {};
 
@@ -132,12 +132,20 @@ function calculate(answers){
 
 	for (let i = 0; i < 20; i++)
 	{
-		if (i < 5)
+		if (i < 4)
 		{
 			var val = answers[i];
 			if (val == 5 || val ==4)
 				h += (val) * weight[i];
-			else if (val != 3)
+			else if(val != 3)
+				b += (5-val) * weight[i];
+		}
+		else if (i == 4)
+		{
+			var val = answers[i];
+			if (val == 5 || val == 4 || val == 3)
+				h += (val) * weight[i];
+			else
 				b += (5-val) * weight[i];
 		}
 		else if (i < 10)
@@ -146,6 +154,8 @@ function calculate(answers){
 				m += (val) * weight[i];
 			else if (val != 3)
 				g += (5-val) * weight[i];
+			else
+				m += val * weight[i];
 		}
 		else if (i < 12)
 		{
@@ -170,27 +180,23 @@ function calculate(answers){
 		}
 		else if (i == 15 || i == 16 || i == 18)
 		{
-			if (val == 5 || val ==4)
+			if (val == 5 || val ==4 || val ==3)
 				s += (val) * weight[i];
 			else if (val != 3)
 				x += (5-val) * weight[i];
 		}
 		else if (i == 17 || i == 19)
 		{
-			if (val == 5 || val ==4)
+			if (val == 5 || val ==4 || val == 3)
 				x += (val) * weight[i];
-			else if (val != 3)
+			else
 				s += (5-val) * weight[i];
 		}
 	}
 
-	let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"X");
+	let result = (h>=b?"H":"B") + (m>=g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"X");	
 	document.getElementById("result").innerText="당신은 "+colorNameMap[result]+"색을 닮았습니다.";
-	document.getElementById("decription").innerText=
-	(o>n?"여러모로 사람을 통해 기운이 차는 당신은 ":"혼자만의 사색을 즐기는 당신은 ")+
-	(m>g?"목표를 성공시키기 위해 ":"깨달음과 경험을 얻기 위해 ") +
-	(s>x?"자신만의 규칙을 세웁니다. ":"주변의 상황을 항상 파악하려고 합니다.")+
-	(h>b?"이런 당신을 사람들은 편안하게 느낄 것입니다.":"이런 당신을 사람들은 조금 불편하지만 따를 것입니다.");
+	document.getElementById("decription").innerText="작성 중";
 	document.getElementById("picture").style.filter = colorCode[result];
 }
 
