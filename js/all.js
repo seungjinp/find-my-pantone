@@ -2,7 +2,7 @@
 "나는 주변의 의견을 잘 받아들이는 편이다.",
 "나는 조별과제를 할 때 최대한 편의를 맞추기 위해 노력한다.",
 "나는 어느 정도 타협이 있어야 이 세상이 살기 편하다고 생각한다.",
-"나는 친구들에게 있어서 편안한 존재이다.",
+"나는 친구를 위해 작은 배려를 하는 건 무리가 아니라고 생각한다.",
 "나는 종종 사회적 약자를 위해 할 수 있는 것을 생각해보고는 한다.",
 "나는 대를 위해서 소를 희생할 수 있는 경우를 이해한다.",
 "나는 과정이 어떻게 되더라도 결과물을 완성하도록 노력한다.",
@@ -18,7 +18,7 @@
 "나는 크게 심리가 흔들리는 경우는 몇 없다.",
 "나는 계획과 탐색보다 실험과 도전을 가치 있게 여긴다.",
 "나는 미지의 영역에 대해서 두려움보다 기대감이 크다.",
-"나는 의견을 대부분의 결정들을 후회하지 않는다."];
+"나는 대부분의 결정들을 후회하지 않는다."];
 
 const colorCode = {
 "HMOS":"invert(76%) sepia(34%) saturate(264%) hue-rotate(291deg) brightness(100%) contrast(94%)", //분홍
@@ -135,7 +135,7 @@ function calculate(answers){
 		if (i < 4)
 		{
 			var val = answers[i];
-			if (val == 5 || val ==4)
+			if (val == 5 || val ==4 || val == 3)
 				h += (val) * weight[i];
 			else if(val != 3)
 				b += (5-val) * weight[i];
@@ -153,7 +153,7 @@ function calculate(answers){
 			if (val == 5 || val ==4)
 				m += (val) * weight[i];
 			else if (val != 3)
-				g += (5-val) * weight[i];
+				g += (6-val) * weight[i];
 			else
 				m += val * weight[i];
 		}
