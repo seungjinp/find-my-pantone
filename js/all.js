@@ -39,7 +39,7 @@ const colorCode = {
 "BGNX":"invert(18%) sepia(62%) saturate(5320%) hue-rotate(328deg) brightness(89%) contrast(90%)" //진달래
 }; 
 
-const weight = [3,3,2,1,1,  2,3,2,2,1, 3,2,2,2,1,  2,1,3,1,3];
+const weight = [3,3,2,1,1,  3,3,2,1,1, 3,2,2,2,1,  2,1,3,1,3];
 
 var confirmedAnswer = {};
 
@@ -64,8 +64,8 @@ function createQuestionBox(question, index){
 		let answer = document.createElement("input");
 		answer.setAttribute("type", "radio");
 		answer.setAttribute("name", "q"+index);
-		answer.setAttribute("value", i+1);
-		answer.addEventListener("click", function(){onClickAnswer(index, i+1);});
+		answer.setAttribute("value", 5-i);
+		answer.addEventListener("click", function(){onClickAnswer(index, 5-i);});
 		answerbox.appendChild(answer);
 		answerbox.appendChild(document.createTextNode(label[i]));
 	}
@@ -132,20 +132,12 @@ function calculate(answers){
 
 	for (let i = 0; i < 20; i++)
 	{
-		if (i < 4)
+		var val = answers[i];
+		if (i < 5)
 		{
-			var val = answers[i];
-			if (val == 5 || val ==4 || val == 3)
+			if (val == 5 || val ==4)
 				h += (val) * weight[i];
 			else if(val != 3)
-				b += (5-val) * weight[i];
-		}
-		else if (i == 4)
-		{
-			var val = answers[i];
-			if (val == 5 || val == 4 || val == 3)
-				h += (val) * weight[i];
-			else
 				b += (5-val) * weight[i];
 		}
 		else if (i < 10)
@@ -153,7 +145,7 @@ function calculate(answers){
 			if (val == 5 || val ==4)
 				m += (val) * weight[i];
 			else if (val != 3)
-				g += (6-val) * weight[i];
+				g += (5-val) * weight[i];
 			else
 				m += val * weight[i];
 		}
@@ -194,7 +186,7 @@ function calculate(answers){
 		}
 	}
 
-	let result = (h>=b?"H":"B") + (m>=g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"X");	
+	let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"X");	
 	document.getElementById("result").innerText="당신은 "+colorNameMap[result]+"색을 닮았습니다.";
 	
 	var desc = "작성 중";
