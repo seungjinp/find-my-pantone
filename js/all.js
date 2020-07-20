@@ -58,16 +58,21 @@ function createQuestionBox(question, index){
 	box.appendChild(h3)
 	let answerbox = document.createElement("div");
 	answerbox.setAttribute("class", "question-answer");
-	const label = ["매우 그렇다", "그렇다", "보통이다", "아니다", "매우 아니다"];
+	const labelText = ["매우 그렇다", "그렇다", "보통이다", "아니다", "매우 아니다"];
 	for (let i = 0; i < 5; i++)
 	{
 		let answer = document.createElement("input");
 		answer.setAttribute("type", "radio");
 		answer.setAttribute("name", "q"+index);
+		answer.setAttribute("id", "q"+index+(5-i));
 		answer.setAttribute("value", 5-i);
 		answer.addEventListener("click", function(){onClickAnswer(index, 5-i);});
 		answerbox.appendChild(answer);
-		answerbox.appendChild(document.createTextNode(label[i]));
+		
+		let labelElement = document.createElement("label");
+		labelElement.setAttribute("for", "q"+index+(5-i));
+		labelElement.appendChild(document.createTextNode(labelText[i]));
+		answerbox.appendChild(labelElement);
 	}
 	box.appendChild(answerbox);
 	return box;
@@ -138,14 +143,14 @@ function calculate(answers){
 			if (val == 5 || val ==4)
 				h += (val) * weight[i];
 			else if(val != 3)
-				b += (5-val) * weight[i];
+				b += (6-val) * weight[i];
 		}
 		else if (i < 10)
 		{
 			if (val == 5 || val ==4)
 				m += (val) * weight[i];
 			else if (val != 3)
-				g += (5-val) * weight[i];
+				g += (6-val) * weight[i];
 			else
 				m += val * weight[i];
 		}
@@ -154,35 +159,35 @@ function calculate(answers){
 			if (val == 5 || val ==4)
 				o += (val) * weight[i];
 			else if (val != 3)
-				n += (5-val) * weight[i];
+				n += (6-val) * weight[i];
 		}
 		else if (i < 14)
 		{
 			if (val == 5 || val ==4)
 				n += (val) * weight[i];
 			else if (val != 3)
-				o += (5-val) * weight[i];
+				o += (6-val) * weight[i];
 		}
 		else if (i == 14)
 		{
 			if (val == 5 || val ==4)
 				o += (val) * weight[i];
 			else if (val != 3)
-				n += (5-val) * weight[i];
+				n += (6-val) * weight[i];
 		}
 		else if (i == 15 || i == 16 || i == 18)
 		{
 			if (val == 5 || val ==4 || val ==3)
 				s += (val) * weight[i];
 			else if (val != 3)
-				x += (5-val) * weight[i];
+				x += (6-val) * weight[i];
 		}
 		else if (i == 17 || i == 19)
 		{
 			if (val == 5 || val ==4 || val == 3)
 				x += (val) * weight[i];
 			else
-				s += (5-val) * weight[i];
+				s += (6-val) * weight[i];
 		}
 	}
 
@@ -190,6 +195,7 @@ function calculate(answers){
 	document.getElementById("result").innerText="당신은 "+colorNameMap[result]+"색을 닮았습니다.";
 	
 	var desc = "작성 중";
+	/*
 	if(result == "BGNS")
 	{
 		desc = "살구색을 닮은 자신만의 신념을 가지고 있습니다.\n이런 신념을 통해 차근히 목표를 향해 다가가는 능력을 갖추었습니다.\n덕분에 주변 사람들은 이런 당신을 뭐든지 적당히 하는 사람이라고 생각하지 않을까 합니다.\n또한 대부분의 결정을 자신만의 기준을 통해 항상 관철하고는 합니다.\n<br/><br/>살구색과 잘 맞는 색상은 똑같이 신념을 가진 보라색이나 믿을 수 있는 남색이 잘 맞습니다.\n반면에 항상 목적을 위해 자신을 관철시키는 회색과 검정색은 의견이 부딪힐 수 있습니다.\n";
@@ -205,7 +211,7 @@ function calculate(answers){
 	else if (result == "HMOX")
 	{
 		desc = "빨간색은 가장 열정적이고 외향적인 색상입니다. 항상 열린 사고를 통해 문제에 다가가며 좋은 결과를 내고는 합니다.\n또한 주변 친구들과 어울릴 줄 아는 당신은 많은 친구들이 좋아할 것입니다.\n이러한 당신이 경험을 많이 쌓고 인맥을 단단히 쌓아올리면 불가능한 것은 없을 것입니다.\n하지만 가끔은 한 가지 방향에 몰두하고 있는지 되돌아보세요.\n<br/><br/>당신은 금색과는 정말 죽이 잘 맞을 수도, 아니면 철천지 원수가 될 수 있습니다.\n혹은 검정색또는 회색과 비즈니스적으로 잘 맞을 수 있습니다.";
-	}
+	}*/
 	document.getElementById("decription").innerHTML=desc;
 	
 	document.getElementById("picture").style.filter = colorCode[result];
