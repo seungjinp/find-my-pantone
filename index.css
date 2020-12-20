@@ -12,6 +12,12 @@
 	font-style: normal;
 }
 
+@media (max-width: 96em) {
+	html {
+	   font-size: 8px;
+	   }
+	}
+
 body {
     font-size:1rem;
     color: white;
@@ -31,7 +37,7 @@ body {
 	max-width: 1125px;
 	min-width: 27rem;
 	width:100%;
-	padding: 4rem 4rem 0 4rem;
+	padding: 8rem 8rem 0 8rem;
 	height: -moz-available;          /* WebKit-based browsers will ignore this. */
 	height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
 	height: fill-available;
@@ -82,7 +88,7 @@ button {
 	max-height: 200px;
 	margin-bottom: 1rem;
 	color:white;
-	font-size: 1em;
+	font-size: 3em;
 	text-align: center;
 	overflow: hidden;
 	cursor: pointer;
