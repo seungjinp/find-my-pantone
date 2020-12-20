@@ -42,11 +42,11 @@ body {
     border : 0.7rem solid white;
 	min-height: 40vh;
 	position: relative;
-	margin-bottom: 20px;
+	margin-bottom: 2rem;
 }
 
 .question-desc {
-	margin: 18px;
+	margin: 1rem;
 	height: 1.7rem;
 }
 
@@ -63,7 +63,7 @@ body {
 }
 
 #question-content {
-	padding: 18px;
+	padding: 1rem;
 	font-size: 4em;
 	position: absolute;
 	bottom: 0;
@@ -76,13 +76,13 @@ button {
 	display: block;
 	width: 100%;
 	border: 0.3rem solid white;
-	border-radius: 8px;
+	border-radius: 1rem;
 	min-height: 3em;
-	height: 8vh;
+	height: 6.5vh;
 	max-height: 200px;
-	margin-bottom: 8px;
+	margin-bottom: 1rem;
 	color:white;
-	font-size: 16px;
+	font-size: 80%;
 	text-align: center;
 	overflow: hidden;
 	cursor: pointer;
@@ -98,7 +98,7 @@ button:hover, button:focus{
 }
 
 #previous-question {
-	margin-top:40px;
+	margin-top:6rem;
 }
 
 .no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
