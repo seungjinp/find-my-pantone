@@ -111,7 +111,8 @@ body {
 .container {
 	max-width: 60vmin;
     margin-left: auto;
-    margin-right: auto;
+	margin-right: auto;
+	height: 100vh;
 }
 
 .content {
