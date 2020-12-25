@@ -110,8 +110,7 @@ body {
 	min-height: 100vh;
 	height: 100%;
 	width: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
+	overflow:hidden;
 }
 
 .container {
@@ -130,7 +129,6 @@ body {
 }
 
 .logo {
-	top:20px;
 	width: 50px;
 	height: 50px;
 	position:absolute;
@@ -198,7 +196,7 @@ body {
 #previous-question {
 	position: absolute;
 	bottom: 5vh;
-	font-size: 0.7rem;
+	font-size: 3vh;
 	left: 1rem;
 	font-family: 'NotoSans-Bold';
 	opacity: 0.7;
