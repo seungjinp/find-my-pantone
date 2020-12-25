@@ -174,7 +174,7 @@ body {
 
 .button-area {
 	position:absolute;
-	bottom: 10vh;
+	bottom: 13vh;
 	text-align: center;
 }
 
@@ -195,8 +195,8 @@ body {
 
 #previous-question {
 	position: absolute;
-	bottom: 5vh;
-	font-size: 3vh;
+	bottom: 7vh;
+	font-size: 2.5vmin;
 	left: 1rem;
 	font-family: 'NotoSans-Bold';
 	opacity: 0.7;
