@@ -155,7 +155,7 @@ body {
 #question-step {
 	float: right;
 	text-align: right;
-	font-size:0.7em;
+	font-size:1.7vmax;
 	font-family: 'NotoSans-Bold';
 	letter-spacing: 0px;
 	color: #2F3438;
@@ -196,7 +196,7 @@ body {
 #previous-question {
 	position: absolute;
 	bottom: 7vh;
-	font-size: 2.5vmin;
+	font-size: 2vmax;
 	left: 1rem;
 	font-family: 'NotoSans-Bold';
 	opacity: 0.7;
