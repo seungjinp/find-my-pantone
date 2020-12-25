@@ -35,35 +35,12 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 function setQuestion(step) {
-    setBackgroudColor();
     domQuestionNumber.innerText = "Q"+ (step + 1);
     domQuestionStep.innerText = (step + 1) + "/" + questions.length;
     domQuestionContent.innerText = questions[step];
     let el = document.querySelector( ':focus' );
     if( el ) el.blur();
     document.getElementById("previous-question").style.display = currentQuestionStep==0?'none':'block';
-}
-
-function setBackgroudColor() {
-    let luma = 100;
-    let randomColor;
-    while (luma > 40)
-    {
-        randomColor = Math.floor(Math.random()*16777215).toString(16);
-        
-        var c = randomColor.substring(1);      // strip #
-        var rgb = parseInt(c, 16);   // convert rrggbb to decimal
-        var r = (rgb >> 16) & 0xff;  // extract red
-        var g = (rgb >>  8) & 0xff;  // extract green
-        var b = (rgb >>  0) & 0xff;  // extract blue
-        
-        luma = 0.2126 * r + 0.7152 * g + 0.0722 * b; // per ITU-R BT.709
-
-        if (luma < 40) {
-            document.body.style.backgroundColor = "#" + randomColor;
-        }
-    }
-
 }
 
 function onClickAnswer(num) {
@@ -89,5 +66,5 @@ function setPrevQuestion() {
 }
 
 function requestResult() {
-    
+
 }

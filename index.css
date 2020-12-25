@@ -1,120 +1,195 @@
 @font-face {
-	font-family: 'GmarketSansMedium';
-	src: url('resources/GmarketSans-subset-medium.woff') format('woff');
+	font-family: 'NotoSans-Regular';
+	src: url('resources/NotoSans-Regular.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'GmarketSansBold';
-	src: url('resources/GmarketSans-subset-bold.woff') format('woff');
+	font-family: 'NotoSans-Bold';
+	src: url('resources/NotoSans-Bold.woff') format('woff');
 	font-weight: normal;
 	font-style: normal;
 }
-
-@media (max-width: 96em) {
+@media (max-width:360px) {
 	html {
-	   font-size: 8px;
-	   }
+		font-size: 10px;
 	}
+}
+
+@media (min-width:361px) and (max-width:399px) {
+	html {
+		font-size: 11px;
+	}
+}
+
+@media (min-width:400px) and (max-width:439px) {
+	html {
+		font-size: 12px;
+	}
+}
+
+@media (min-width:440px) and (max-width:479px) {
+	html {
+		font-size: 13px;
+	}
+}
+
+@media (min-width:480px) and (max-width:519px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (min-width:520px) and (max-width:559px) {
+	html {
+		font-size: 15px;
+	}
+}
+
+@media (min-width:560px) and (max-width:599px) {
+	html {
+		font-size: 16px;
+	}
+}
+
+@media (min-width:600px) and (max-width:639px) {
+	html {
+		font-size: 17px;
+	}
+}
+
+@media (min-width:640px) and (max-width:679px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+@media (min-width:680px) and (max-width:719px) {
+	html {
+		font-size: 19px;
+	}
+}
+
+@media (min-width:720px) and (max-width:759px) {
+	html {
+		font-size: 20px;
+	}
+}
+
+@media (min-width:760px) and (max-width:799px) {
+	html {
+		font-size: 21px;
+	}
+}
+
+@media (min-width:800px) and (max-width:839px) {
+	html {
+		font-size: 22px;
+	}
+}
+
+@media (min-width:840px) and (max-width:879px) {
+	html {
+		font-size: 23px;
+	}
+}
+
+@media (min-width:880px) {
+	html {
+		font-size: 24px;
+	}
+}
+.no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
 
 body {
-    font-size:1rem;
-    color: white;
-    font-family:'GmarketSansMedium';
-	background-color:yellowgreen;
-	min-height: 100vh;
-	margin:0;
-	height: 100vh;
-	height: -moz-available;          /* WebKit-based browsers will ignore this. */
-	height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-	height: fill-available;
+	margin: 0;
+	padding: 0;
+	font-family: 'NotoSans-Regular';
+}
+
+.container {
+	max-width: 60vmin;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1125px;
-	min-width: 27rem;
-	padding: 8rem 8rem 0 8rem;
-	height: -moz-available;          /* WebKit-based browsers will ignore this. */
-	height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-	height: fill-available;
+	position: relative;
+	height: 100vh;
 }
 
-#question-box {
-    border : 0.7rem solid white;
-	min-height: 40vh;
-	position: relative;
-	margin-bottom: 2rem;
+.logo {
+	top:20px;
+	width: 50px;
+	height: 50px;
+	position:absolute;
 }
 
 .question-desc {
-	margin: 1rem;
-	height: 1.7rem;
-}
-
-.question-desc em {
-	float: left;
-	font-family:'GmarketSansBold';
-	font-style: normal;
-	font-size:3em;
-}
-
-.question-desc span {
-	float: right;
-	font-size: 1.7em;
-	color:rgba(255, 255, 255, 0.7);
-}
-
-#question-content {
-	padding: 1rem;
-	font-size: 4em;
+	width: 60vmin;
 	position: absolute;
-	bottom: 0;
-	font-family:'GmarketSansBold';
+	text-align: left;
+	font-family: 'NotoSans-Bold';
+	letter-spacing: 0px;
+	color: #2F3438;
+	opacity: 1;
 }
 
-button {
-	font-family:'GmarketSansMedium';
-	background-color: transparent;
-	display: block;
-	width: 100%;
-	border: 0.3rem solid white;
-	border-radius: 1rem;
-	min-height: 3em;
-	height: 6.5vh;
-	max-height: 200px;
-	margin-bottom: 1rem;
-	color:white;
-	font-size: 3em;
+#question-number {
+	position: absolute;
+	top:15px;
+	left: 25px;
+	font-style: normal;
+	font-size: 24px;
+}
+
+#question-step {
+	float: right;
+	text-align: right;
+	font-size:0.7em;
+	font-family: 'NotoSans-Bold';
+	letter-spacing: 0px;
+	color: #2F3438;
+	opacity: 0.5;
+}
+
+#question-box {
+	text-align: left;
+	font-family: 'NotoSans-Bold';
+	letter-spacing: 0px;
+	color: #2F3438;
+	opacity: 1;
+	padding: 20vmin 1rem 0rem 1rem;
+	font-size: 1.7rem;
+}
+
+.button-area {
+	position:absolute;
+	bottom: 10vh;
 	text-align: center;
-	overflow: hidden;
-	cursor: pointer;
 }
 
-button:hover, button:focus{
-	/* border-color: black; */
-	/* color:black; */
-	animation-duration: 3s; 
-	animation-name: rainbow; 
-	animation-iteration-count: infinite;
-	outline: 0;
-}
+ button {
+	display: inline;
+	font-family:'NotoSans-Bold';
+	background: #2F3438 0% 0% no-repeat padding-box;
+	box-shadow: 0px 3px 10px #0000001F;
+	border-radius: 6px;
+	opacity: 1;
+	width: 100%;
+	color:white;
+	border: 0;
+	margin:0.7rem 1rem 0rem 1rem;
+	height: 2.3rem;
+	font-size: 1rem;
+} 
 
 #previous-question {
-	margin-top:6rem;
-}
-
-.no-drag {-ms-user-select: none; -moz-user-select: -moz-none; -webkit-user-select: none; -khtml-user-select: none; user-select:none;}
-
-@keyframes rainbow {     
-	0% { color: #ff2a2a; border-color: #ff2a2a; }
-	15% { color: #ff7a2a; border-color: #ff7a2a;}
-	30% { color: #ffc52a; border-color: #ffc52a;}
-	45% { color: #43ff2a; border-color: #43ff2a;}
-	60% { color: #2a89ff; border-color: #2a89ff;}
-	75% { color: #202082; border-color: #202082;}
-	90% { color: #6b2aff; border-color: #6b2aff;} 
-	100% { color: #e82aff; border-color: #e82aff;}
+	position: absolute;
+	bottom: 5vh;
+	font-size: 0.7rem;
+	left: 1rem;
+	font-family: 'NotoSans-Bold';
+	opacity: 0.7;
 }
