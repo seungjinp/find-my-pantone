@@ -59,7 +59,7 @@ const resultDesc = {
     "HMNS" : "차가운 금속을 닮은 당신은 은색을 닮았어요. 멋들어진 은색 안경을 쓴 사서 같은 사람이 떠올라요. 이성과 지혜를 통해 행동한다는 뜻인 ‘이지적이다’라는 말을 아시나요? 은색을 닮은 당신은 이 단어와 어울려요. 이런 당신을 어쩌면 다른 사람들이 굉장히 어려워할 수 있을 것 같아요.<br/><br/>어려운 이미지이지만 사회생활을 못한다는 뜻은 아니어요. 당신은 어려워 보이지만 타인을 위한 배려도 갖추었거든요. 지혜로 맞서기 때문에 언제나 두려울 것이 없어요. 무엇이든 효율적으로 척척 해내지 않나요? 그렇지만 불필요한 시간 낭비를 싫어해서 가끔은 차가운 모습을 내비칠 수 있겠네요. 가끔은 비효율적이라도 타인의 사담을 더 들어줘요. 카리스마 있지만 좀 더 부드럽고 따스한 사람이 되어보는 것이 어떨까요?<br/><br/>당신에게는 딱 따뜻한 분홍색을 닮은 사람과 어울립니다. 차가운 나를 따뜻하게 해주는 귀염둥이 분홍색을 닮은 사람과 잘 지내봐요. 하지만 오히려 자신의 의견이 중요한 연두색과는 맞지 않을 수 있어요. 그래도 사람을 무시해선 안돼요, 알았죠?",
     "HMNX" : "#7AC5C5",
     "HGOS" : "#0F4C81",
-    "HGOX" : "#FF6F61",
+    "HGOX" : "많은 사람들이 당신을 좋아해요. 인싸중의 인싸라고 할까요?<br/><br/>세상 사람들에게 배려하는 면모가 많이 보이고 항상 재미있고 신나는 사람이라 많은 사람들이 당신을 좋아해요. 당신은 톡톡 튀는 주황색을 닮았어요. 열정적인 빨강색보다 유하고 자애로워서 자유로운 영혼의 소유자처럼 보이네요. 인기가 너무 많다 보니 여기저기서 당신을 부르거나 많이 얘기하고 있어요.<br/><br/>정이 많고 배려심이 넘쳐흘러서 ‘사람좋다’는 얘기를 많이 들어보지 않았나요? 정말로 주황색을 닮은 당신은 친구가 되기 쉬워요. 하지만 너무 틀에 박히고 지루한 작업은 조금 힘들게 느껴져요. 또 즉흥적인 편이고 타인의 얘기를 잘 들어주는 편이라 자유롭지 않으면 너무 숨이 막혀요. 그렇지만 언제까지나 즐거울 수 없어요. 또 건설적인 작업이나 이야기에서 단점이 보이기 때문에 조금만 더 진지하게 고민해보거나 계획을 좀 더 세워보는 것이 어떨까 싶네요.<br/><br/>누구에게나 친근하고 잘 지낼 자신이 있는 당신이지만, 이런 당신을 못마땅하게 여기는 사람들이 있어요. 예를 들어 진취적인 발전을 원하는 금색을 닮은 사람들이 당신을 피할 가능성이 있어요. 하지만 그 외에는 정말로 당신을 좋아해주는 사람들이 많아요. 굳이 천생연분을 꼽을 수는 없을 정도로 사랑받는 사람이란 걸 잊지 마세요~",
     "HGNS" : "#B565A7",
     "HGNX" : "#955251",
     "BMOS" : "#88B04B",
@@ -68,7 +68,7 @@ const resultDesc = {
     "BMNX" : "#8CA4CF",
     "BGOS" : "#169C78",
     "BGOX" : "#F0BF59",
-    "BGNS" : "#DECDBF",
+    "BGNS" : "인생에서 제습기가 너무 많이 돌았네요. 건조한 모래와 같은 당신은 염세적인 사람일 가능성이 높아 보여요. 그렇지만 세상을 혼자 살아가기엔 모자람이 없는 사람이죠. 왜냐하면 맡은 바의 일은 잘하는 사람이고, 정해진 규율을 잘 따르거든요. 진취적인 사람과는 다르게 뭐든지 정해진 대로 세상사 그냥 정해진대로 흘러가는 것이 맞을 것이에요.<br/><br/>건조한 삶을 보내는 당신은 어찌 보면 조용하고 의젓해 보여서 의지가 많이 되는 사람이기도 하지만 사람이 마냥 덤덤할 수는 없지요. 무덤덤해 보여도 새로운 환경이나 익숙하지 않은 것에는 속으로는 불편함을 꽤나 느끼고 있죠? 속으로만 불편해하고 노력하는 것보다 조금 더 드러내어 보세요. 내가 생각했던 것보다 사람들은 더 많이 자신을 내비쳐요. 참다가 말하는 것보다 좀 더 나를 드러내는 것이 속이 편해질 것이에요.<br/><br/>당신에게는 항상 밝고 이유없이 주목받는 것처럼 보이는 분홍색을 닮은 사람과 잘 안 맞을 수 있어요. 반면에 항상 사람 좋은 주황색을 닮은 사람들은 건조한 당신도 잘 보듬어줄 것이에요.",
     "BGNX" : "#DA4F70",
 };
 
@@ -78,7 +78,7 @@ const intimacyMap = {
     "HMNS" : "HMOS", // pink
     "HMNX" : "",
     "HGOS" : "",
-    "HGOX" : "",
+    "HGOX" : "", // O
     "HGNS" : "",
     "HGNX" : "",
     "BMOS" : "",
@@ -87,7 +87,7 @@ const intimacyMap = {
     "BMNX" : "",
     "BGOS" : "",
     "BGOX" : "",
-    "BGNS" : "",
+    "BGNS" : "HGOX",
     "BGNX" : "",
 };
 
@@ -97,12 +97,12 @@ const rivalMap = {
     "HMNS" : "BMOS", // lightgreen
     "HMNX" : "",
     "HGOS" : "",
-    "HGOX" : "",
+    "HGOX" : "BMOX",
     "HGNS" : "",
     "HGNX" : "",
     "BMOS" : "HMNS",
     "BMOX" : "HGOX",
-    "BMNS" : "",
+    "BMNS" : "", // O
     "BMNX" : "",
     "BGOS" : "",
     "BGOX" : "",
@@ -144,8 +144,14 @@ window.addEventListener('DOMContentLoaded', function() {
     let domRivalColorImage = document.getElementById("rival-image-color");
     domRivalColorImage.style.backgroundColor = colorHexCode[rivalMap[type]];
 
-    let domIntimacyName = document.getElementById("intimacy-name");
-    domIntimacyName.innerHTML = keywordMap[intimacyMap[type]] + "&nbsp" + colorNameMap[intimacyMap[type]];
+    if (intimacyMap[type]) {
+        let domIntimacyName = document.getElementById("intimacy-name");
+        domIntimacyName.innerHTML = keywordMap[intimacyMap[type]] + "&nbsp" + colorNameMap[intimacyMap[type]];
+    }
+    else {
+        let domIntimacyImage = document.getElementById("intimacy-image");
+        domIntimacyImage.style.display = "none";   
+    }
 
     if (rivalMap[type]){
         let domRivalName = document.getElementById("rival-name");
