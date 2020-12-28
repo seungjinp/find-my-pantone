@@ -4,23 +4,24 @@
 		<meta property="og:url" content="https://zaffre001.github.io/discover-color/">
 		<meta property="og:title" content="Discover color">
 		<meta property="og:type" content="website">
-		<meta property="og:image" content="">
+		<meta property="og:image" content="thumbnail.png">
 		<meta property="og:description" content="나를 나타내는 색상을 찾아보세요">
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Discover color</title>
-		<link rel="stylesheet" href="result.css" />
+        <link rel="stylesheet" href="result.css" />
+        <script src="result.js"></script>
 	</head>
 	<body>
 		<div class="container">
-            <p id="result-title">당신의 색은<br/><span id="result-keyword">따뜻한&nbsp</span><span class="result-color-text">코랄</span></p>
+            <p id="result-title">당신의 색은<br/><span id="result-keyword">따뜻한&nbsp</span><span id="result-color-text">코랄</span></p>
             <div id="result-image">
                 <div class="image-frame">
-                    <div id="result-image-color" class="image-color"></div>
+                    <div id="result-image-color" id="result-image-color"></div>
                     <table id="result-image-desc">
-                        <tr><td>CMYK</td><td>0 64 54 0</td></tr>
-                        <tr><td>RGB</td><td>255 111 97</td></tr>
-                        <tr><td>HEX</td><td>FF6F61</td></tr>
+                        <tr><td>CMYK</td><td id="cmyk-code">0 64 54 0</td></tr>
+                        <tr><td>RGB</td><td id="rgb-code">255 111 97</td></tr>
+                        <tr><td>HEX</td><td id="hex-code">FF6F61</td></tr>
                     </table>
                 </div>
             </div>
@@ -32,12 +33,12 @@
             <div id="relation-color">
                 <p style="font-family: 'NotoSans-Bold';">다른 색과의 관계</p>
                 <div class="relation-image-frame">
-                    <div id="intimacy-image-color" class="relation-image-color"></div>
+                    <div id="intimacy-image-color" class="relation-image-color" id="intimacy-image-color"></div>
                     <p id="intimacy-name" class="relation-name">어쩌구 빨강</p>
                 </div>
 
                 <div class="relation-image-frame" style="margin-left: 15px;">
-                    <div id="rival-image-color" class="relation-image-color"></div>
+                    <div id="rival-image-color" class="relation-image-color" id="rival-image-color"></div>
                     <p id="rival-name" class="relation-name">어쩌구 빨강</p>
                 </div>
             </div>
@@ -47,7 +48,7 @@
                 <image src="resources/kakaolink_btn_small.png"></image>
             </div>
 
-            <button style="margin:5em 0 7em 0">테스트 다시하기</button>
+            <button style="margin:5em 0 7em 0" class="no-drag">테스트 다시하기</button>
         </div>
 	</body>
 </html>

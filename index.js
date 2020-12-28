@@ -4,7 +4,7 @@ const questions = [
     "나는 어느 정도 타협이 있어야 이 세상이 살기 편하다고 생각한다.",
     "나는 친구를 위해 작은 배려를 하는 건 무리가 아니라고 생각한다.",
     "나는 종종 사회적 약자를 위해 할 수 있는 것을 생각해보고는 한다.",
-    "나는 대를 위해서 소를 희생할 수 있는 경우를 이해한다.",
+    "나는 대를 위해서 소를 희생할 수밖에 없는 경우를 이해한다.",
     "나는 과정이 어떻게 되더라도 결과물을 완성하도록 노력한다.",
     "나는 줄곧 어떻게 하면 효율적으로 일할 수 있는지 고민하곤 한다.",
     "나는 항상 자신의 목표를 위해 만반의 준비를 해 둔다.",
@@ -19,12 +19,14 @@ const questions = [
     "나는 계획과 탐색보다 실험과 도전을 가치 있게 여긴다.",
     "나는 미지의 영역에 대해서 두려움보다 기대감이 크다.",
     "나는 대부분의 결정들을 후회하지 않는다."];
-    
+
 var domQuestionNumber;
 var domQuestionStep;
 var domQuestionContent;
 var currentQuestionStep = 0;
 var userAnswer = {};
+
+const weight = [3,3,2,1,1,  3,3,2,1,1, 3,2,2,2,1,  2,1,3,1,3];
 
 window.addEventListener('DOMContentLoaded', function() {
     domQuestionNumber = document.getElementById("question-number");
@@ -65,6 +67,77 @@ function setPrevQuestion() {
 	}
 }
 
-function requestResult() {
+function calculateColorType() {
+    let h = 0;
+	let b = 0;
+	let g = 0;
+	let m = 0;
+	let o = 0;
+	let n = 0;
+	let s = 0;
+	let x = 0;
 
+	for (let i = 0; i < 20; i++)
+	{
+		var val = userAnswer[i];
+		if (i < 5)
+		{
+			if (val == 5 || val ==4)
+				h += (val) * weight[i];
+			else if(val != 3)
+				b += (6-val) * weight[i];
+		}
+		else if (i < 10)
+		{
+			if (val == 5 || val ==4)
+				m += (val) * weight[i];
+			else if (val != 3)
+				g += (6-val) * weight[i];
+			else
+				m += val * weight[i];
+		}
+		else if (i < 12)
+		{
+			if (val == 5 || val ==4)
+				o += (val) * weight[i];
+			else if (val != 3)
+				n += (6-val) * weight[i];
+		}
+		else if (i < 14)
+		{
+			if (val == 5 || val ==4)
+				n += (val) * weight[i];
+			else if (val != 3)
+				o += (6-val) * weight[i];
+		}
+		else if (i == 14)
+		{
+			if (val == 5 || val ==4)
+				o += (val) * weight[i];
+			else if (val != 3)
+				n += (6-val) * weight[i];
+		}
+		else if (i == 15 || i == 16 )
+		{
+			if (val == 5 || val ==4 || val ==3)
+				s += (val) * weight[i];
+			else if (val != 3)
+				x += (6-val) * weight[i];
+		}
+		else if (i == 17 || i == 18 || i == 19)
+		{
+			if (val == 5 || val ==4 || val == 3)
+				x += (val) * weight[i];
+			else
+				s += (6-val) * weight[i];
+		}
+    }
+    
+    let result = (h>b?"H":"B") + (m>g?"M":"G") + (o>n?"O":"N")  + (s>x?"S":"X");
+
+    return result;
+}
+
+function requestResult() {
+    window.location.href = "result.html?type="+calculateColorType();
 }
