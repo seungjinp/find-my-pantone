@@ -181,3 +181,7 @@ var rgb2cmyk = function(r, g, b, normalized){
         k: k
     }
 }
+
+function onClickRetry() {
+    window.location.href = "index.html";
+}
