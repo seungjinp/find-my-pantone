@@ -45,7 +45,7 @@ const colorHexCode = {
     "HGNX" : "#955251",
     "BMOS" : "#88B04B",
     "BMOX" : "#BB9F52",
-    "BMNS" : "#2F3438",
+    "BMNS" : "#000000",
     "BMNX" : "#8CA4CF",
     "BGOS" : "#169C78",
     "BGOX" : "#F0BF59",
@@ -64,7 +64,7 @@ const resultDesc = {
     "HGNX" : "#955251",
     "BMOS" : "#88B04B",
     "BMOX" : "뭘 해도 잘 하겠다는 소리 들어봤죠?<br/><br/>항상 반짝이는 금처럼, 자신이 관심있는 분야에서 항상 황금기를 보이는 당신에게는 금색이 어울려요. 당신을 나타낼 만한 금색을 디지털로 표현할 수 없어서 슬퍼지네요. 그런데, 정말 뭘 해도 잘 하겠다는 소리 안 들어봤나요? 진취적인 당신은 어떤 분야에서도 마음먹으면 잘할 것처럼 보이거든요.<br/><br/>금색을 닮은 당신이 선택한 문항들을 보면 외향적이고, 효율적이고, 목표를 위해서 가감없이 의사결정을 할 수 있는 사람이군요. 이 정도로 타고나니 조직에서 리더를 한다면 더 멋진 사람이 되겠네요. 하지만 자신이 느끼기에 일을 못하는 사람이나 아무 생각 없어 보이는 사람을 너무 미워하진 마세요. 이 세상에서 완벽한 사람은 없어요~ 누구나 각자의 사정이 있고, 나와 달리 처리 속도가 느린 사람이 많아요. <br/><br/>제가 생각하기에 성과에 연연하지 않지만 인정이 많은 사람을 싫어할 것 같아요. 왜냐하면 당신이 느끼기엔 이런 사람은 영양가가 없는데 사람들이 좋아해서 일할 때 오히려 거슬릴 수 있어요. 그러니 조금 어수룩하지만 사람은 좋은 주황색을 닮은 사람과 잘 맞지 않고, 자기 자신과 비슷하거나 똑같이 일 잘하는 검정색과 닮은 사람과 친하게 지내겠네요.",
-    "BMNS" : "#2F3438",
+    "BMNS" : "무심함, 이성적의 결정체 검.정.색.<br/><br/>세상 사는 사람들에게 너무 무심해요. 큼큼 다른 색상과 닮은 사람들과 달리 비판적으로 설명을 시작했네요. 하지만 당신은 멋지고 전공분야에서 잘나갈 사람이에요. 인간에 대해 별 생각을 하지 않아서 이타적이지도 않고, 막상 엄청나게 이기적이지도 않은 무채색의 사람. 당신은 무채색인 검정색을 닮았습니다.<br/><br/>그러나 항상 자신의 전공분야에 있어서 효율적이고 자신의 주관이 뚜렷하기 때문에 잘해내는 편이에요. 어쩌면 연구직에 잘 맞는 사람이라고도 볼 수 있겠네요. 또한 합리적인 사고를 중시하기 때문에 뭐든지 근거에 기반하여 생각하는 습관이 있을지도 몰라요. 이런 글을 읽어도 신뢰하지 않을 당신은 좀 다채색인 사고를 할 필요가 있을 것 같아요.<br/><br/>당신은… 딱히 세상사에 무관심하기 때문에 딱히 잘 지내거나 못 지내는 사람이 없을 것 같네요. 어차피 별 관심이 없는데 왜 잘 지내고 못 지내고가 있을까요? 하지만 당신을 꽤 아낄 만한 금색과 더 잘 지낼 수 있겠다는 생각이 드네요.",
     "BMNX" : "#8CA4CF",
     "BGOS" : "#169C78",
     "BGOX" : "#F0BF59",
@@ -83,7 +83,7 @@ const intimacyMap = {
     "HGNX" : "",
     "BMOS" : "",
     "BMOX" : "BMNS",
-    "BMNS" : "",
+    "BMNS" : "BMOX",
     "BMNX" : "",
     "BGOS" : "",
     "BGOX" : "",
@@ -147,8 +147,14 @@ window.addEventListener('DOMContentLoaded', function() {
     let domIntimacyName = document.getElementById("intimacy-name");
     domIntimacyName.innerHTML = keywordMap[intimacyMap[type]] + "&nbsp" + colorNameMap[intimacyMap[type]];
 
-    let domRivalName = document.getElementById("rival-name");
-    domRivalName.innerHTML = keywordMap[rivalMap[type]] + "&nbsp" + colorNameMap[rivalMap[type]];
+    if (rivalMap[type]){
+        let domRivalName = document.getElementById("rival-name");
+        domRivalName.innerHTML = keywordMap[rivalMap[type]] + "&nbsp" + colorNameMap[rivalMap[type]];
+    }
+    else {
+        let domRivalImage = document.getElementById("rival-image");
+        domRivalImage.style.display = "none";
+    }
 });
 
 function hexToRgb(hex) {
