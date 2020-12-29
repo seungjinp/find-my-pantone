@@ -163,7 +163,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     document.querySelector('meta[property="og:description"]').setAttribute("content", keywordMap[type] + "&nbsp" + colorNameMap[type] + "색");
-    document.querySelector('meta[property="og:image"]').setAttribute("content", "resources/300x150-" + colorHexCode[type].substr(1, colorHexCode[type].length - 1).toLowerCase());
+    document.querySelector('meta[property="og:image"]').setAttribute("content", "resources/300x150-" + colorHexCode[type].substr(1, colorHexCode[type].length - 1).toLowerCase() + ".png");
     
     Kakao.Link.createScrapButton({
         container: '#share-color',
