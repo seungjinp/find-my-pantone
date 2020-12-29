@@ -177,6 +177,7 @@ window.addEventListener('DOMContentLoaded', function() {
             'https://zaffre001.github.io/discover-color/'+imageUrl,
           link: {
             mobileWebUrl: location.href,
+            webUrl: location.href
           },
         },
         buttons: [
@@ -184,6 +185,7 @@ window.addEventListener('DOMContentLoaded', function() {
             title: '나랑 닮은 색상 찾기',
             link: {
               mobileWebUrl: location.href,
+              webUrl: location.href
             },
           }
         ]
