@@ -162,13 +162,32 @@ window.addEventListener('DOMContentLoaded', function() {
         domRivalImage.style.display = "none";
     }
 
-    document.querySelector('meta[property="og:description"]').setAttribute("content", keywordMap[type] + "&nbsp" + colorNameMap[type] + "색");
-    document.querySelector('meta[property="og:image"]').setAttribute("content", "resources/300x150-" + colorHexCode[type].substr(1, colorHexCode[type].length - 1).toLowerCase() + ".png");
+    let imageKeyWord = keywordMap[type] + "&nbsp" + colorNameMap[type] + "색";
+    document.querySelector('meta[property="og:description"]').setAttribute("content", imageKeyWord);
+    let imageUrl = "resources/300x150-" + colorHexCode[type].substr(1, colorHexCode[type].length - 1).toLowerCase() + ".png";
+    document.querySelector('meta[property="og:image"]').setAttribute("content", imageUrl);
     
-    Kakao.Link.createScrapButton({
+    Kakao.Link.createDefaultButton({
         container: '#share-color',
-        requestUrl: location.href
-    });
+        objectType: 'feed',
+        content: {
+          title: 'Discover Color',
+          description: imageKeyWord,
+          imageUrl:
+            'http://https://zaffre001.github.io/discover-color/'+imageUrl,
+          link: {
+            mobileWebUrl: location.href,
+          },
+        },
+        buttons: [
+          {
+            title: '나랑 닮은 색상 찾기',
+            link: {
+              mobileWebUrl: location.href,
+            },
+          }
+        ]
+      });
 });
 
 function hexToRgb(hex) {
