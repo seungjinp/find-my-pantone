@@ -174,7 +174,7 @@ window.addEventListener('DOMContentLoaded', function() {
           title: 'Discover Color',
           description: imageKeyWord,
           imageUrl:
-            'http://zaffre001.github.io/discover-color/'+imageUrl,
+            'https://zaffre001.github.io/discover-color/'+imageUrl,
           link: {
             mobileWebUrl: location.href,
           },
