@@ -161,6 +161,13 @@ window.addEventListener('DOMContentLoaded', function() {
         let domRivalImage = document.getElementById("rival-image");
         domRivalImage.style.display = "none";
     }
+
+
+    
+    Kakao.Link.createScrapButton({
+        container: '#share-color',
+        requestUrl: 'https://developers.kakao.com'
+    });
 });
 
 function hexToRgb(hex) {
