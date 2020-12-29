@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', function() {
         domRivalImage.style.display = "none";
     }
 
-    let imageKeyWord = keywordMap[type] + "&nbsp" + colorNameMap[type] + "색";
+    let imageKeyWord = keywordMap[type] + " " + colorNameMap[type] + "색";
     document.querySelector('meta[property="og:description"]').setAttribute("content", imageKeyWord);
     let imageUrl = "resources/300x150-" + colorHexCode[type].substr(1, colorHexCode[type].length - 1).toLowerCase() + ".png";
     document.querySelector('meta[property="og:image"]').setAttribute("content", imageUrl);
