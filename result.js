@@ -166,7 +166,7 @@ window.addEventListener('DOMContentLoaded', function() {
     
     Kakao.Link.createScrapButton({
         container: '#share-color',
-        requestUrl: 'https://developers.kakao.com'
+        requestUrl: location.href
     });
 });
 
