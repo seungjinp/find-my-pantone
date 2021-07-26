@@ -1,61 +1,77 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta property="og:url" content="https://zaffre001.github.io/discover-color/">
-		<meta property="og:title" content="Discover color">
-		<meta property="og:type" content="website">
-		<meta property="og:image" content="">
-		<meta property="og:description" content="나를 나타내는 색상을 찾아보세요">
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Discover color</title>
-        <link rel="stylesheet" href="result.css" />
-        <script src="result.js"></script>
-        <script src="kakao.min.js"></script>
-        <script>
-            Kakao.init("3aa2aee89d722717f5f1cb20f1a99b58");
-            console.log("Kakao.isInitialized : " + Kakao.isInitialized());
-        </script>
-	</head>
-	<body>
-		<div class="container">
-            <p id="result-title">당신의 색은<br/><span id="result-keyword">따뜻한&nbsp</span><span id="result-color-text">코랄</span></p>
-            <div id="result-image">
-                <div class="image-frame">
-                    <div id="result-image-color" id="result-image-color"></div>
-                    <table id="result-image-desc">
-                        <tr><td>CMYK</td><td id="cmyk-code">0 64 54 0</td></tr>
-                        <tr><td>RGB</td><td id="rgb-code">255 111 97</td></tr>
-                        <tr><td>HEX</td><td id="hex-code">FF6F61</td></tr>
-                    </table>
-                </div>
+
+<head>
+    <meta property="og:url" content="https://zaffre001.github.io/discover-color/">
+    <meta property="og:title" content="Discover color">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="나를 나타내는 색상을 찾아보세요">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover color</title>
+    <link rel="stylesheet" href="result.css" />
+    <script src="result.js"></script>
+    <script src="kakao.min.js"></script>
+    <script>
+        Kakao.init("3aa2aee89d722717f5f1cb20f1a99b58");
+        console.log("Kakao.isInitialized : " + Kakao.isInitialized());
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <p id="result-title">당신의 색은<br /><span id="result-keyword">따뜻한&nbsp</span><span id="result-color-text">코랄</span>
+        </p>
+        <div id="result-image">
+            <div class="image-frame">
+                <div id="result-image-color" id="result-image-color"></div>
+                <table id="result-image-desc">
+                    <tr>
+                        <td>CMYK</td>
+                        <td id="cmyk-code">0 64 54 0</td>
+                    </tr>
+                    <tr>
+                        <td>RGB</td>
+                        <td id="rgb-code">255 111 97</td>
+                    </tr>
+                    <tr>
+                        <td>HEX</td>
+                        <td id="hex-code">FF6F61</td>
+                    </tr>
+                </table>
             </div>
-
-            <p id="result-desc">
-                국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다. 신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여 국가의 보호를 받는다. 공공필요에 의한 재산권의 수용·사용 또는 제한 및 그에 대한 보상은 법률로써 하되, 정당한 보상을 지급하여야 한다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기 위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다. 국군의 조직과 편성은 법률로 정한다. 대통령의 선거에 관한 사항은 법률로 정한다. 사법권은 법관으로 구성된 법원에 속한다. 헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다.
-            </p>
-
-            <div id="relation-color">
-                <p style="font-family: 'NotoSans-Bold';">다른 색과의 관계</p>
-                <div class="relation-image-frame" id="intimacy-image">
-                    <div id="intimacy-image-color" class="relation-image-color" id="intimacy-image-color"></div>
-                    <p id="intimacy-name" class="relation-name">어쩌구 빨강</p>
-                    <p class="relation-mark">잘맞아요</p>
-                </div>
-
-                <div class="relation-image-frame" style="margin-left: 15px;" id="rival-image">
-                    <div id="rival-image-color" class="relation-image-color" id="rival-image-color"></div>
-                    <p id="rival-name" class="relation-name">어쩌구 빨강</p>
-                    <p class="relation-mark">안맞아요</p>
-                </div>
-            </div>
-
-            <div id="share-color">
-                <p style="font-family: 'NotoSans-Bold';">결과 공유하기</p>
-                <image src="resources/kakaolink_btn_small.png"></image>
-            </div>
-
-            <button style="margin:5em 0 7em 0" class="no-drag" onclick="onClickRetry()">테스트 다시하기</button>
         </div>
-	</body>
+
+        <p id="result-desc">
+            국회는 정부의 동의없이 정부가 제출한 지출예산 각항의 금액을 증가하거나 새 비목을 설치할 수 없다. 신체장애자 및 질병·노령 기타의 사유로 생활능력이 없는 국민은 법률이 정하는 바에 의하여
+            국가의 보호를 받는다. 공공필요에 의한 재산권의 수용·사용 또는 제한 및 그에 대한 보상은 법률로써 하되, 정당한 보상을 지급하여야 한다. 국정의 중요한 사항에 관한 대통령의 자문에 응하기
+            위하여 국가원로로 구성되는 국가원로자문회의를 둘 수 있다. 국군의 조직과 편성은 법률로 정한다. 대통령의 선거에 관한 사항은 법률로 정한다. 사법권은 법관으로 구성된 법원에 속한다. 헌법재판소
+            재판관은 정당에 가입하거나 정치에 관여할 수 없다.
+        </p>
+
+        <div id="relation-color">
+            <p style="font-family: 'Cafe24Ssurround';">다른 색과의 관계</p>
+            <div class="relation-image-frame" id="intimacy-image">
+                <div id="intimacy-image-color" class="relation-image-color" id="intimacy-image-color"></div>
+                <p id="intimacy-name" class="relation-name">어쩌구 빨강</p>
+                <p class="relation-mark">잘맞아요</p>
+            </div>
+
+            <div class="relation-image-frame" style="margin-left: 15px;" id="rival-image">
+                <div id="rival-image-color" class="relation-image-color" id="rival-image-color"></div>
+                <p id="rival-name" class="relation-name">어쩌구 빨강</p>
+                <p class="relation-mark">안맞아요</p>
+            </div>
+        </div>
+
+        <div id="share-color">
+            <p style="font-family: 'Cafe24Ssurround';">결과 공유하기</p>
+            <image src="resources/kakaolink_btn_small.png"></image>
+        </div>
+
+        <button style="margin:5em 0 7em 0" class="no-drag" onclick="onClickRetry()">테스트 다시하기</button>
+    </div>
+</body>
+
 </html>

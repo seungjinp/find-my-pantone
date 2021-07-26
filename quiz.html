@@ -10,7 +10,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Discover color</title>
-	<link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="quiz.css" />
 	<script src="index.js"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-3V43GLMNS9"></script>
@@ -27,21 +27,22 @@
 	<div class="container">
 		<div class="content">
 
+			<p class="question-desc"><object type="image/svg+xml" data="logo.svg" class="logo"></object><em
+					id="question-number">Q1</em><span id="question-step">1/12</span></p>
+			<div id="question-content" class="no-drag">나는 종종 사회적 약자를 위해 할 수 있는 것을 생각해보고는 한다.</div>
 
-			<div id="question-content" class="no-drag">당신은 어떤 색인가요?</div>
-			<p style="text-align:center" ;> 퍼스널 컬러로 알아보는 나의 성향 테스트
-			</p>
-			<div class="button-area">created by Jin 🧀</div>
+			<div class="button-area">
+				<button class="no-drag" onclick="onClickAnswer(5)">매우 그렇다</button>
+				<button class="no-drag" onclick="onClickAnswer(4)">그렇다</button>
+				<button class="no-drag" onclick="onClickAnswer(3)">보통</button>
+				<button class="no-drag" onclick="onClickAnswer(2)">아니다</button>
+				<button class="no-drag" onclick="onClickAnswer(1)">매우 아니다</button>
+				<div id="previous-question" class="no-drag" onclick="setPrevQuestion()">이전 질문으로</div>
+			</div>
 
 
-
-
-			<button class="no-drag" onclick="onClicktry()">테스트 하러가기</button>
 		</div>
-
-
 	</div>
-
 </body>
 
 </html>
