@@ -180,7 +180,7 @@ body {
   letter-spacing: 0px;
   color: #2f3438;
   opacity: 1;
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 
 .button-area {
@@ -203,7 +203,7 @@ button {
   margin-top: 0.46rem;
   padding: 0rem 1rem 0rem 1rem;
   height: 6vh;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 #previous-question {
