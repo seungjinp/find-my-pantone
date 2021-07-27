@@ -27,8 +27,6 @@ var domQuestionContent
 var currentQuestionStep = 0
 var userAnswer = {}
 
-const weight = [3, 3, 2, 1, 1, 3, 3, 2, 1, 1, 3, 2, 2, 2, 1, 2, 1, 3, 1, 3]
-
 window.addEventListener('DOMContentLoaded', function () {
   domQuestionNumber = document.getElementById('question-number')
   domQuestionStep = document.getElementById('question-step')
@@ -53,6 +51,7 @@ function onClicktry() {
 
 function onClickAnswer(num) {
   userAnswer[currentQuestionStep] = num
+
   if (currentQuestionStep < questions.length - 1) {
     setNextQuestion()
   } else {
@@ -73,47 +72,38 @@ function setPrevQuestion() {
 }
 
 function calculateColorType() {
-  let h = 0
-  let b = 0
-  let g = 0
-  let m = 0
-  let o = 0
-  let n = 0
+  let e = 0
+  let i = 0
   let s = 0
-  let x = 0
+  let n = 0
+  let f = 0
+  let t = 0
+  let p = 0
+  let j = 0
 
   for (let i = 0; i < 20; i++) {
     var val = userAnswer[i]
+
     if (i < 5) {
-      if (val == 5 || val == 4) h += val * weight[i]
-      else if (val != 3) b += (6 - val) * weight[i]
+      if (val == 2) e += val
+      else if (val == 1) i += val
     } else if (i < 10) {
-      if (val == 5 || val == 4) m += val * weight[i]
-      else if (val != 3) g += (6 - val) * weight[i]
-      else m += val * weight[i]
-    } else if (i < 12) {
-      if (val == 5 || val == 4) o += val * weight[i]
-      else if (val != 3) n += (6 - val) * weight[i]
-    } else if (i < 14) {
-      if (val == 5 || val == 4) n += val * weight[i]
-      else if (val != 3) o += (6 - val) * weight[i]
-    } else if (i == 14) {
-      if (val == 5 || val == 4) o += val * weight[i]
-      else if (val != 3) n += (6 - val) * weight[i]
-    } else if (i == 15 || i == 16) {
-      if (val == 5 || val == 4 || val == 3) s += val * weight[i]
-      else if (val != 3) x += (6 - val) * weight[i]
-    } else if (i == 17 || i == 18 || i == 19) {
-      if (val == 5 || val == 4 || val == 3) x += val * weight[i]
-      else s += (6 - val) * weight[i]
+      if (val == 2) s += val
+      else if (val == 1) n += val
+    } else if (i < 15) {
+      if (val == 2) f += val
+      else if (val == 1) t += val
+    } else if (i < 20) {
+      if (val == 2) p += val
+      else if (val == 1) j += val
     }
   }
 
   let result =
-    (h > b ? 'H' : 'B') +
-    (m > g ? 'M' : 'G') +
-    (o > n ? 'O' : 'N') +
-    (s > x ? 'S' : 'X')
+    (e > i ? 'H' : 'B') +
+    (s > n ? 'M' : 'G') +
+    (f > t ? 'O' : 'N') +
+    (j > p ? 'S' : 'X')
 
   return result
 }

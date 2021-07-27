@@ -55,6 +55,22 @@ body {
   height: 100%;
   overflow: hidden;
 }
+a:link {
+  text-decoration: none;
+}
+mark {
+  display: inline-block;
+  line-height: 0em;
+  padding-bottom: 0.5em;
+  background-color: #aec6cf;
+}
+a:visited {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: #0050b5;
+}
 
 .question-desc {
   width: 27rem;
@@ -98,7 +114,7 @@ body {
 .button-area {
   /* background-image: url('../resources/background.png'); */
   position: absolute;
-  top: 36vh;
+  top: 38vh;
   text-align: center;
 }
 
