@@ -1,41 +1,41 @@
 const colorNameMap = {}
-colorNameMap['INFJ'] = '세룰리안'
-colorNameMap['INFP'] = '로즈 쿼츠'
-colorNameMap['INTJ'] = '세레니티'
-colorNameMap['INTP'] = '아쿠아 스카이'
-colorNameMap['ISFJ'] = '블루 아이리스'
-colorNameMap['ISFP'] = '리빙 코랄'
-colorNameMap['ISTJ'] = '래디언트 오키드'
-colorNameMap['ISTP'] = '클래식 블루'
-colorNameMap['ENFJ'] = '그리너리'
-colorNameMap['ENFP'] = '코넬 레드'
-colorNameMap['ENTJ'] = '마르살라'
-colorNameMap['ENTP'] = '리빙 코랄'
-colorNameMap['ESFJ'] = '에메랄드'
-colorNameMap['ESFP'] = '미모사'
-colorNameMap['ESTJ'] = '샌드 달러'
-colorNameMap['ESTP'] = '허니서클'
+colorNameMap['INFJ'] = '15-4020 세룰리안'
+colorNameMap['INFP'] = '13-1520 로즈 쿼츠'
+colorNameMap['INTJ'] = '15-3919 세레니티'
+colorNameMap['INTP'] = '14-4811 아쿠아 스카이'
+colorNameMap['ISFJ'] = '18-3943 블루 아이리스'
+colorNameMap['ISFP'] = '16-1546 리빙 코랄'
+colorNameMap['ISTJ'] = '18-3224 래디언트 오키드'
+colorNameMap['ISTP'] = '19-4052 클래식 블루'
+colorNameMap['ENFJ'] = '15-0343 그리너리'
+colorNameMap['ENFP'] = '19-1664 트루 레드'
+colorNameMap['ENTJ'] = '17-5641 에메랄드'
+colorNameMap['ENTP'] = '16-1546 리빙 코랄'
+colorNameMap['ESFJ'] = '18-1438 마르살라'
+colorNameMap['ESFP'] = '14-0848 미모사'
+colorNameMap['ESTJ'] = '13-1106 샌드 달러'
+colorNameMap['ESTP'] = '18-2120 허니서클'
 
 const keywordMap = {}
-keywordMap['INFJ'] = '15-4020'
-keywordMap['INFP'] = '13-1520'
-keywordMap['INTJ'] = '15-3919'
-keywordMap['INTP'] = '14-4811'
-keywordMap['ISFJ'] = '18-3943'
-keywordMap['ISFP'] = '16-1546'
-keywordMap['ISTJ'] = '18-3224'
-keywordMap['ISTP'] = '19-4052'
-keywordMap['ENFJ'] = '15-0343'
-keywordMap['ENFP'] = '19-1664'
-keywordMap['ENTJ'] = '18-1438'
-keywordMap['ENTP'] = '16-1546'
-keywordMap['ESFJ'] = '17-5641'
-keywordMap['ESFP'] = '14-0848'
-keywordMap['ESTJ'] = '13-1106'
-keywordMap['ESTP'] = '18-2120'
+keywordMap['INFJ'] = '차갑고도 따뜻한'
+keywordMap['INFP'] = '선명하고 산뜻한'
+keywordMap['INTJ'] = '은은하고 차분한'
+keywordMap['INTP'] = '조용하고 섬세한'
+keywordMap['ISFJ'] = '잔잔하고 단정한'
+keywordMap['ISFP'] = '부드럽고 유연한'
+keywordMap['ISTJ'] = '세련되고 성숙한'
+keywordMap['ISTP'] = '깊이있고 투명한'
+keywordMap['ENFJ'] = '싱그럽고 명랑한'
+keywordMap['ENFP'] = '활발하고 열정적인'
+keywordMap['ENTJ'] = '대담하고 청초한'
+keywordMap['ENTP'] = '자유롭고 쾌활한'
+keywordMap['ESFJ'] = '포근하고 다정한'
+keywordMap['ESFP'] = '즐겁고 상쾌한'
+keywordMap['ESTJ'] = '품위있고 정돈된'
+keywordMap['ESTP'] = '화창하고 밝은'
 
 const colorHexCode = {
-  INFJ: '#8CA4CF',
+  INFJ: '#98B4D4',
   INFP: '#F7CACA',
   INTJ: '#93A9D1',
   INTP: '#7AC5C5',
@@ -44,17 +44,17 @@ const colorHexCode = {
   ISTJ: '#B565A7',
   ISTP: '#0F4C81',
   ENFJ: '#88B04B',
-  ENFP: '#B31B1B',
-  ENTJ: '#955251',
+  ENFP: '#BC243C',
+  ENTJ: '#169C78',
   ENTP: '#FF6F61',
-  ESFJ: '#169C78',
+  ESFJ: '#955251',
   ESFP: '#F0BF59',
   ESTJ: '#DECDBF',
   ESTP: '#D65076',
 }
 
 const resultDesc = {
-  INFJ: '다재 다능한 인기쟁이, 로즈쿼츠 핑크!<br/><br/>아름다운 석영의 분홍빛을 닮은 당신은 다른 사람들과 금세 친해지고 사람들을 잘 챙깁니다. 이런 면모 때문에 사람들은 당신을 유한 사람이라고 생각하지만, 당신의 내면은 주관이 뚜렷하고 강단이 있을 가능성이 높습니다. 원하는 목표가 있다면 어느 정도의 손해는 당연히 감수하여야 한다고 생각하겠네요. <br/><br/>개방적인 빨강색보다는 조금은 더 보수적인, 보라색이 일부 섞인 분홍색이 당신에게 어울립니다. 또한 자신의 의견을 관철하면서 뚜렷한 목표가 있는 분홍색은 어쩌면 스스로를 믿을 수 있는 원천이 하나씩 있을 것 같네요. 그러나 이런 점이 누군가에게는 ‘무얼 믿고 저렇게 나서지?’ 라는 느낌을 줄 수 있겠군요. 남들과 의견을 나눌 때 조금만 더 나의 원천을 보여주는 건 어떨까요?<br/><br/><br/>세상사에 염세적인 모래색을 닮은 사람들과는 부딪힐 수가 있어요~ 잘난 내가 더 노력해보죠. 그리고 목표를 이루고자 할 때 열정적인 레드를 닮은 사람들과 잘 어울리겠네요. 또 의외로 내향적이지만 지적인 은색을 존중할 가능성이 높습니다.',
+  INFJ: '생각이 너무 많아요. 가끔은 생각이 너무 많은 이 뇌를 강제로 꺼버리고 싶어요. <br><br>  겉으로는 이상적인 우정이나 사랑은 없다며 냉소적이지만, 속으로는 누구보다도 순수한 소통을 갈망해요. 겉바속촉한 사람이에요. <br><br>  인간관계를 잘 유지하기 위해 때로는 가면을 써요. <br><br>  말할 때 비유나 은유 등 완곡한 표현을 많이 써요. <br><br>  사람들 사이에서 직접 이끌고 리드하기보다는 그 사람이 좋아하는 말과 행동을 통해 주도권을 상대에게 넘겨줘요. <br><br>  기본적으로 모든 사람에게 선의를 베풀며 다정다감, 친절, 호감을 사요. <br><br>  하지만 그 이상은 선을 긋고 있어서, 차가우면서도 거리감 있다고 느껴져요. <br><br>  절친이나 가족에게도 예외 없이 선이 있어요. 선을 넘으면 누구나 얄짤없어요. <br><br>  직관을 통해 상대방의 감정을 단번에 읽어요. 눈치가 빨라요. <br><br>  신중하고 완벽주의적인 성향, 상상력이 풍부해서 망상을 많이 해요. <br><br>  내 자신이 마음에 안 들어요. 내적으로 고민, 갈등이 많아요. <br><br>행동하기 전 시뮬레이션은 필수에요. <br><br>  무슨 말을 하더라도 근거가 없으면 싫어요. 어디서 주워들어서 말하는거 절대 못믿어요. <br><br>  친하고 마음 맞는사람들이랑 노는게 세상에서 제일 좋아요.  <br> <br> 다같이 노는 무의미한 시간이 제일 지루해요. 그래서 평소엔 조용히 다니는데 엠티 같은곳 가면 가끔 춤추고 노래부르고 싶어요. <br><br> 감수성이 풍부해요. 심리학, 철학, 인문학, 예술 등 추상적으로 생각할 수 있는 거 좋아해요. <br><br>',
   INFP: '파워레인저 주인공은 항상 레드였죠. 이 테스트를 만든 사람의 학교 상징색도 빨간색이라서 이름을 저렇게 붙인건..맞아요..흠흠.. 아무튼, 빨강 하면 떠오르는 이미지, 당신도 알고 있어요. 타인을 위해 희생할 줄 알지만 목표를 위해서라면 그 누구보다 열정적으로 노력하는 당신은 빨강을 닮았군요! 그리고 빨강을 닮은 당신은 누구에게나 사랑받을 준비가 되어있습니다. 왜냐하면 타인에게 과감하게 자신의 감정을 솔직하게 말하니 따를 수밖에 없네요. <br/><br/>그런데 눈 앞의 목표를 위해 달려가고 노력하는 것이 지치지는 않나요? 많은 사람들이 좋아해주고 당신도 사람들에게 이타적이기 때문에 버틸 수야 있지만, 마치 경주마가 달릴 때 다른 것을 보지 못하도록 차안대로 가려진 것처럼 외향적인 나에 가려져 더 중요한 것을 놓칠 수 있어요. 조금만 혼자만의 시간을 가져보아요.<br/><br/>이런 당신에게는 새삼 비협조적이고 목표만을 위해 달리는 과묵한 미드나잇 블랙과는 맞지 않겠네요. 물론 이런 사람도 당신은 잘 지내는 척 지낼 수 있겠죠~ 하지만 다크 히어로와 히어로는 대척점인 것! 반면에 언제나 나와 비슷한 핑크를 닮은 사람이나 언제나 누군가를 보듬어주는 브라운과 잘 맞겠네요. 그럼 오늘도 열심히!',
   INTJ: '차가운 금속을 닮은 당신은 겨울의 은색을 닮았어요. 멋들어진 은색 안경을 쓴 사서 같은 사람이 떠올라요. 이성과 지혜를 통해 행동한다는 뜻인 ‘이지적이다’라는 말을 아시나요? 은색을 닮은 당신은 이 단어와 어울려요. 이런 당신을 어쩌면 다른 사람들이 굉장히 어려워할 수 있을 것 같아요.<br/><br/>어려운 이미지이지만 사회생활을 못한다는 뜻은 아니어요. 당신은 어려워 보이지만 타인을 위한 배려도 갖추었거든요. 지혜로 맞서기 때문에 언제나 두려울 것이 없어요. 무엇이든 효율적으로 척척 해내지 않나요? 그렇지만 불필요한 시간 낭비를 싫어해서 가끔은 차가운 모습을 내비칠 수 있겠네요. 가끔은 비효율적이라도 타인의 사담을 더 들어줘요. 카리스마 있지만 좀 더 부드럽고 따스한 사람이 되어보는 것이 어떨까요?<br/><br/>당신은 딱 따뜻한 분홍색을 닮은 사람과 어울립니다. 차가운 나를 따뜻하게 해주는 귀염둥이 분홍색을 닮은 사람과 잘 지내봐요. 자신의 말이 중요한 세이지 그리너리와는 맞지 않을 수 있어요. 그래도 사람을 무시해선 안돼요, 알았죠?',
   INTP: '흘러가는 물은 유하지만 거스를 수 없죠.<br/><br/>물색을 닮은 당신은 다소 내성적이지만 다른 사람들에게 굉장히 협조적입니다. 그러다 보니 사회적 약자나 소외되는 사람에게 관심을 가져주는 착한 사람이군요. 그렇지만 흘러가는 물은 유하지만 거슬러 흐를 수 없듯이 자신의 목표를 뚜렷하게 가지고 이루기 위해 노력하는 사람들일 가능성이 높습니다. 또한 굉장히 섬세한 편이어서, 자의가 아니게 눈치를 많이 볼 것 같네요.<br/><br/>물은 누구나 뛰어들 수 있고 잔잔한 수면위에 누군가 돌을 던져 파동을 일으킬 수 있습니다. 즉, 다른 사람들의 영향을 많이 받고 상처를 쉽게 받을 것이에요. 그러니 조심하세요. 누군가에게 반하면 크게 데어버려요. 이런 물색을 닮은 당신에게 제가 드릴 수 있는 말은 ‘너무 신경 쓰지 마. 너는 충분히 할 수 있어.’ 목표를 이루려고 노력하지만 외부 요인을 많이 받으니 괴롭겠지만 힘내세요~<br/><br/>유하고 노력하는 당신에게는 항상 근면성실하고 본받을 점이 있는 세룰리안 스카이를 닮은 사람이 어울립니다. 하늘색을 닮은 사람들과는 비슷한 면이 있고 같은 목표를 가지고 있는 가능성이 높거든요. 그러나 완전히 초록빛을 도는 에메랄드 그린을 닮은 사람들과는 잘 맞지 않을 것이에요. 타협이 잘 안 된다고 생각할 것이기 때문이에요.',
@@ -73,7 +73,7 @@ const resultDesc = {
 }
 
 const intimacyMap = {
-  INFJ: 'INTJ', // silver
+  INFJ: 'ENTP', // silver
   INFP: 'ISTP', // brown
   INTJ: 'INFJ', // pink
   INTP: 'ENTP',
@@ -92,7 +92,7 @@ const intimacyMap = {
 }
 
 const rivalMap = {
-  INFJ: 'ESTJ', // sand
+  INFJ: 'ISTJ', // sand
   INFP: 'ENTJ', // black
   INTJ: 'ENFJ', // lightgreen
   INTP: 'ESFJ',
@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', function () {
   type = params.get('type')
 
   let domKeywordLabel = document.getElementById('result-keyword')
-  domKeywordLabel.innerHTML = keywordMap[type] + '&nbsp'
+  domKeywordLabel.innerHTML = keywordMap[type] + '&nbsp' + '<br>'
 
   let domColorNameText = document.getElementById('result-color-text')
   domColorNameText.innerText = colorNameMap[type]
@@ -132,8 +132,8 @@ window.addEventListener('DOMContentLoaded', function () {
   let rgb = hexToRgb(colorHexCode[type])
   // let cmyk = rgb2cmyk(rgb.r, rgb.g, rgb.b, false)
   // domCmykText.innerText = cmyk.c + ' ' + cmyk.m + ' ' + cmyk.y + ' ' + cmyk.k
-  domRgbText.innerText = rgb.r + ' ' + rgb.g + ' ' + rgb.b
-  domHexText.innerText = colorHexCode[type]
+  domRgbText.innerText = 'RGB: ' + rgb.r + ' ' + rgb.g + ' ' + rgb.b
+  domHexText.innerText = 'HEX: ' + colorHexCode[type]
 
   let domDescLabel = document.getElementById('result-desc')
   domDescLabel.innerHTML = resultDesc[type]
@@ -146,8 +146,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   if (intimacyMap[type]) {
     let domIntimacyName = document.getElementById('intimacy-name')
-    domIntimacyName.innerHTML =
-      keywordMap[intimacyMap[type]] + '&nbsp' + colorNameMap[intimacyMap[type]]
+    domIntimacyName.innerHTML = colorNameMap[intimacyMap[type]]
   } else {
     let domIntimacyImage = document.getElementById('intimacy-image')
     domIntimacyImage.style.display = 'none'
@@ -155,8 +154,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
   if (rivalMap[type]) {
     let domRivalName = document.getElementById('rival-name')
-    domRivalName.innerHTML =
-      keywordMap[rivalMap[type]] + '&nbsp' + colorNameMap[rivalMap[type]]
+    domRivalName.innerHTML = colorNameMap[rivalMap[type]]
   } else {
     let domRivalImage = document.getElementById('rival-image')
     domRivalImage.style.display = 'none'

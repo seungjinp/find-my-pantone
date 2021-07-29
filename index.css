@@ -1,17 +1,20 @@
 @font-face {
-  font-family: 'Cafe24Ssurround';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff')
+  font-family: 'InfinitySans-BoldA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-BoldA1.woff')
     format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Cafe24Oneprettynight';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff')
+  font-family: 'InfinitySans-RegularA1';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/InfinitySans-RegularA1.woff')
     format('woff');
   font-weight: normal;
   font-style: normal;
 }
+
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 .no-drag {
   -ms-user-select: none;
@@ -22,10 +25,12 @@
 }
 
 body {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   margin: 0;
   padding: 0;
-  font-family: 'Cafe24Oneprettynight';
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: 700;
+  color: #2f3438;
   min-height: -webkit-fill-available;
   min-height: 100vh;
   height: 100%;
@@ -45,9 +50,10 @@ body {
 .content {
   background-image: url('./resources/background.png');
   background-size: cover;
+  background-position: center center;
   display: grid;
   justify-items: center;
-  background-image: 'red';
+
   max-width: 27rem;
   margin-left: auto;
   margin-right: auto;
@@ -76,7 +82,7 @@ a:hover {
   width: 27rem;
   position: absolute;
   text-align: left;
-  font-family: 'Cafe24Ssurround';
+  font-family: 'NanumSquare', sans-serif;
   letter-spacing: 0px;
   color: #2f3438;
   opacity: 1;
@@ -94,51 +100,54 @@ a:hover {
   float: right;
   text-align: right;
   font-size: 1.7vmax;
-  font-family: 'Cafe24Ssurround';
+  font-family: 'InfinitySans-BoldA1';
   letter-spacing: 0px;
   color: #2f3438;
   opacity: 0.5;
 }
 
 #question-content {
+  height: 50%;
   position: relative;
-  top: 180px;
-  text-align: left;
-  font-family: 'Cafe24Ssurround';
+  top: 60vh;
+  text-align: center;
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: 300;
   letter-spacing: 0px;
   color: #2f3438;
   opacity: 1;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
 }
 
 .button-area {
   /* background-image: url('../resources/background.png'); */
   position: absolute;
-  top: 38vh;
+  top: 510px;
   text-align: center;
 }
 
 button {
   cursor: pointer;
   display: inline;
-  font-family: 'Cafe24Oneprettynight';
-  background: #ff6f61 0% 0% no-repeat padding-box;
+  font-family: 'NanumSquare', sans-serif;
+  font-weight: 400;
+  background: #27272a 0% 0% no-repeat padding-box;
 
-  border-radius: 10px;
+  border-radius: 3px;
   opacity: 1;
   width: 50%;
   color: white;
   border: 0;
-  margin-top: 0.46rem;
+  margin-top: 25rem;
   padding: 0rem 1rem 0rem 1rem;
   height: 6vh;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 
 #previous-question {
   position: relative;
   margin-top: 20px;
   font-size: 1.5rem;
-  font-family: 'Cafe24Ssurround';
+  font-family: 'InfinitySans-BoldA1';
   opacity: 0.7;
 }
