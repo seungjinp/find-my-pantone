@@ -77,9 +77,10 @@ body {
 }
 
 #question-step {
-  float: right;
-  right: 20%;
-  font-size: 1.7vmax;
+  position: absolute;
+  top: 22px;
+  right: 100px;
+  font-size: 16px;
   font-family: 'InfinitySans-BoldA1';
   letter-spacing: 0px;
   color: #2f3438;
