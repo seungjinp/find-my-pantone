@@ -179,8 +179,7 @@ window.addEventListener('DOMContentLoaded', function () {
     content: {
       title: 'Find My Pantone',
       description: imageKeyWord,
-      imageUrl:
-        'https://seungjinp.github.io/find-my-pantone/resources/300x150-F8D974.png',
+      imageUrl: 'https://seungjinp.github.io/find-my-pantone/' + imageUrl,
       link: {
         mobileWebUrl: location.href,
         webUrl: location.href,
