@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', function () {
     },
     buttons: [
       {
-        title: '성향으로 알아보는 내 팬톤 컬러 찾기',
+        title: '성향으로 내 팬톤 컬러 찾기',
         link: {
           mobileWebUrl: location.href,
           webUrl: location.href,
