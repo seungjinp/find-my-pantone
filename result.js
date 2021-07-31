@@ -171,6 +171,7 @@ window.addEventListener('DOMContentLoaded', function () {
   document
     .querySelector('meta[property="og:image"]')
     .setAttribute('content', imageUrl)
+  console.log(imageUrl)
 
   Kakao.Link.createDefaultButton({
     container: '#share-color',
@@ -178,7 +179,8 @@ window.addEventListener('DOMContentLoaded', function () {
     content: {
       title: 'Find My Pantone',
       description: imageKeyWord,
-      imageUrl: 'https://seungjinp.github.io/find-my-pantone/' + imageUrl,
+      imageUrl:
+        'https://seungjinp.github.io/find-my-pantone/resources/300x150-F8D974.png',
       link: {
         mobileWebUrl: location.href,
         webUrl: location.href,
