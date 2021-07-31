@@ -166,7 +166,7 @@ window.addEventListener('DOMContentLoaded', function () {
     .setAttribute('content', imageKeyWord)
   let imageUrl =
     'resources/300x150-' +
-    colorHexCode[type].substr(1, colorHexCode[type].length - 1).toLowerCase() +
+    colorHexCode[type].substr(1, colorHexCode[type].length - 1) +
     '.png'
   document
     .querySelector('meta[property="og:image"]')
