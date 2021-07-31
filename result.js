@@ -247,3 +247,15 @@ var rgb2cmyk = function (r, g, b, normalized) {
 function onClickRetry() {
   window.location.href = 'index.html'
 }
+
+function navigate() {
+  let params = new URL(document.location).searchParams
+  type = params.get('type')
+  window.location.href = 'result.html?type=' + intimacyMap[type]
+}
+
+function navigate2() {
+  let params = new URL(document.location).searchParams
+  type = params.get('type')
+  window.location.href = 'result.html?type=' + rivalMap[type]
+}
