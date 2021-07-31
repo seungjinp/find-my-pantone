@@ -78,8 +78,8 @@ body {
 }
 
 #result-desc {
-  margin-top: 3em;
-  font-size: 1.2rem;
+  margin-top: 1em;
+  font-size: 1rem;
 }
 td {
   font-family: 'Helvetica Neue', Helvetica, arial, sans-serif;
@@ -93,6 +93,13 @@ td {
   font-weight: 700;
   margin-top: 5em;
   text-align: center;
+}
+
+.highlight {
+  background: url(https://www.andyhooke.co.uk/wp-content/uploads/2018/02/yellow-brushstroke.png);
+  background-repeat: no-repeat;
+  background-size: 100% 95%;
+  padding: 8px 0;
 }
 
 .relation-image-frame {
@@ -145,7 +152,7 @@ td {
 
 #share-color {
   text-align: center;
-  margin-top: 5em;
+  margin-top: 1rem;
 }
 
 button {
